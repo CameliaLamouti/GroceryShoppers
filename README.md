@@ -1,2 +1,2 @@
 # Soen287
-KJFBKJDFKJWBFKW
+<!DOCTYPE html> 
