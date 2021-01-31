@@ -6,5 +6,5 @@
   <head>
   <meta charset = ″utf-8″ />
   <title></title>
-  <p>update test</p>
+  <p>edit</p>
 </head>
