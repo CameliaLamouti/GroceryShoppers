@@ -22,10 +22,35 @@ body{
     background-color: #e48d8d;
 }
 
+nav{
+  flex:1;
+  text-align: right;
+}
+
 .navbar-links ul{
     display: flex;
-    text-align: right;
-    margin-right: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li{
+  display: inline-block;    
+  list-style-type: none;    
+}
+
+nav ul li{
+  display: inline-block; 
+  margin-right: 20px;   
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.navbar-links li a:hover{
+color: #2d52cc;
 }
 
 .toggle-button {
@@ -51,7 +76,7 @@ body{
     display: flex;
   }
   .navbar-links {
-    /* display: none; */
+    display: none;
     width: 100%;
   }
   .navbar{
@@ -61,43 +86,24 @@ body{
   .navbar-links ul{
     flex-direction: column;
     width: 100%;
-  }
-  .navbar-links li{
-    flex-direction: column;
     text-align: center;
+    background-color: #e79f9f;
   }
+  .navbar-links li {    
+    text-align: center;
+    flex-direction: column;
+  }
+  
   .navbar-links li a {
-    padding: .5rem 1rem;;
+    padding: .5rem 1rem;
   }
-  .navbar-links.active{
+  .navbar-links.active {
     display:flex;
   }
 
 }
 
-nav ul{
-    display: inline-block;    
-    list-style-type: none;    
-}
 
-li{
-    list-style-type: none;
-}
-
-nav ul li{
-    display: inline-block; 
-    margin-right: 20px;   
-}
-
-.navbar-links li a{
-    text-decoration: none;
-    color: black;
-    display: block;
-}
-
-.navbar-links li a:hover{
-  color: #2d52cc;
-}
 
 .container{
     max-width: 1300px;
