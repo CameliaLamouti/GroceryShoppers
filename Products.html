@@ -1,40 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="Images/Logo.png" width="125px"></a>
-        </div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>            
-            <span class="bar"></span>            
-            <span class="bar"></span>            
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <nav>
-                <ul>
-                    <li><a href="Products.html">Products</a></li>
-                    <li><a href="Locations.html">Locations</a></li>
-                    <li><a href="Sign In.html">Sign in</a></li>                    
-                    <li><a href="My Cart.html">My Cart</a></li>
-                </ul>
-            </nav>
-        </div>
-    </nav>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Products</title>
+        <script src="script.js" defer></script>
+        <style>
+            ul { list-style-type: square;}
+            body{background-color:darkgrey;}
+            h1.center{
+                text-align: center;
 
-    <div class="container">
-        <h3>Products</h3>
-            <p> Aisles</p>
-    </div>
-
-</body>
+            }
+            h3{color:crimson;
+                
+            }
+            .center{
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+      width: 250px;
+    }
+    p.center{
+        text-align:center;
+    }
+        h3{
+            font-size:larger
+        }
+        ol{
+            font-size:larger
+        }
+            
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="Images/Logo.png" width="125px"></a>
+            </div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>            
+                <span class="bar"></span>            
+                <span class="bar"></span>            
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <nav>
+                    <ul>
+                        <li><a href="Locations.html">Locations</a></li>
+                        <li><a href="Sign In.html">Sign in</a></li>                    
+                        <li><a href="My Cart.html">My Cart</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+        <p>
+            <br>
+        <h1 class="center">Products</h1><br>
+        <h3>Fruits & Vegetables</h3>
+        <ol>
+            <br/>
+            <li>Apples <img src= "Images/apples.jpg" height=100px class="center"></li>
+            <p class="center"><a href="products-pages/Apples.html">More Description on Apples</a></p>
+            <hr>
+            <br/>
+            <li>Bananas <img src= "Images/bananas.jpg" width= 100px height=100px class="center"></li>
+            <p class="center"><a href="products-pages/Bananas.html">More Description on Bananas</a></p>
+            <hr>
+            <br/>
+            <li>Broccoli <img src= "Images/broccoli.jpg" width= 100px height=100px class="center"></li>
+            <p class="center"><a href="products-pages/Broccoli.html">More Description on Brococoli</a></p>
+            <hr>
+            <br/>
+            </ol>
+        <h3>Fish & Seafood</h3>
+        <ol>
+            <br/>
+            <li>Salmon <img src="Images/salmon.jpg" width= 100px height=100px class="center"></li>
+            <p class="center"><a href="products-pages/Salmon.html">More Description on Salmon</a></p>
+            <hr>
+            <br/>
+            <li>Tuna <img src="Images/tuna.jpg" width= 100px height=100px class="center"></li>
+            <p class="center"><a href="products-pages/tuna.html">More Description on Tuna</a></p>
+            <hr>
+            <br/>
+            <li>Shrimp<img src= "Images/shrimp.jpg" width= 100px height=100px class="center"></li>
+            <p class="center"><a href="products-pages/shrimp.html">More Description on Shrimp</a></p>
+            <hr>
+            <br/>
+            </ol>
+        <h3>Meat</h3>
+        <ol>
+            <br/>
+            <li>Beef<img src= "Images/beef.jpg" width= 100px height=100px class="center"></li>
+            <p class="center"><a href="products-pages/Beef.html">More Description on Beef</a></p>
+            <hr>
+            <br/>
+            <li>Chicken<img src= "Images/chicken.jpg" width= 100px height=100px class="center"></li>
+            <p class="center"><a href="products-pages/Chicken.html">More Description on Chicken</a></p>
+            <hr>
+            <br/>
+            <li>Pork<img src= "Images/pork.jpg" width= 100px height=100px class="center"></li>
+            <p class="center"><a href="products-pages/Pork.html">More Description on Pork</a></p>
+            <hr>
+            <br/>
+            </ol>
+        <h3>Dairy</h3>
+        <ol>
+            <br/>
+            <li>Milk<img src= "Images/milk.jpg" width= 100px height=100px class="center"></li>
+            <p class="center"><a href="products-pages/Milk.html">More Description on Milk</a></p>
+            <hr>
+            <br/>
+            <li>Cheese<img src= "Images/cheese.jpg" width= 100px height=100px class="center"></li>
+            <p class="center"><a href="products-pages/Cheese.html">More Description on Cheese</a></p>
+            <hr>
+            <br/>
+            <li>Yogurt<img src= "Images/yogurt.jpg" width= 100px height=100px class="center"></li>
+            <p class="center"><a href="products-pages/Yogurt.html">More Description on Yogurt</a></p>
+            <hr>
+            <br/>
+            </ol>
+        <h3></h3>
+    </p>
+    <br/>
+    </body>
 </html>
