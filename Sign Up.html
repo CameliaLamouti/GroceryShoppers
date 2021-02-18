@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" width="125px"></a>
+        </div>
+        <div class="navbar-links">
+            <nav>
+                <ul>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="Locations.html">Locations</a></li>
+                    <li><a href="Sign In.html">Sign in</a></li>                    
+                    <li><a href="My Cart.html">My Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+    
+
+    <!-- FORM HERE WHICH LINKS TO SIGN IN-->
+    <div class="form">
+        <form action="action_page.php" method="post">
+      
+            <div class="container">
+              <label for="first name"><b>First Name</b></label>
+              <input type="text" placeholder="Enter First Name" name="first name" required> 
+              <label for="last name"><b>Last Name</b></label>
+              <input type="text" placeholder="Enter Last Name" name="last name" required> 
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>              
+              <label for="email"><b>Confirm Email</b></label>
+              <input type="text" placeholder="Re-enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>              
+              <label for="psw"><b>Confirm Password</b></label>
+              <input type="password" placeholder="Re-enter Password" name="psw" required>
+          
+              <button type="submit">Create Account</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> I agree to the terms and conditions.
+              </label>
+            </div>
+          
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" class="cancelbtn">Cancel</button>      
+            </br>
+              <span class="signin">Already have an account? <a href="Sign In.html">Sign In</a></span>
+            </div>
+          </form>
+    </div>
+
+</body>
+</html>
