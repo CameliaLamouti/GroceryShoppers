@@ -161,9 +161,9 @@ form {
   
   /* Set a style for all buttons */
   button {
-    background-color: #369939;
-    color: white;
-    padding: 14px 20px;
+    background-color: #e48d8d;
+    color: black;
+    
     margin: 8px 0;
     border: none;
     cursor: pointer;
@@ -237,8 +237,14 @@ form {
 }
 
 .dropdown{
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.navbar .navbar-links .dropdown li a{
+  
 }
