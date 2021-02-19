@@ -43,7 +43,7 @@ nav{
 
 .navbar-links li{
   display: inline-block;    
-  list-style-type: none;    
+  list-style-type: none; 
 }
 
 nav ul li{
@@ -93,9 +93,9 @@ color: #2d52cc;
   }
   .navbar-links ul{
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     text-align: center;
-    background-color: purple;
+    background-color: rgb(252, 203, 211);
   }
   .navbar-links li {    
     text-align: center;
@@ -120,6 +120,7 @@ color: #2d52cc;
     padding-right: 25px;
 }
 
+/*----Front page banner-----*/
 .banner{
     width: 100% ;
     display: block;
@@ -130,7 +131,7 @@ color: #2d52cc;
     display: block;
 }
 
-/* Bordered form */
+/*------ Bordered form -------*/
 div.form
 {
     display: block;
@@ -161,13 +162,13 @@ form {
   
   /* Set a style for all buttons */
   button {
-    background-color:pink;
-    color: black;
-    
-    margin: 10px 0;
+    background-color:#369939;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 25%;
+    width: 100%;
   }
   
   /* Add a hover effect for buttons */
@@ -210,9 +211,11 @@ form {
     }
   }
 
+ /*----Footer----*/ 
+
 .footer {  
   font-family: Arial, Helvetica, sans-serif;  
-  background-color: #e48d8d;  
+  background-color: pink;  
   color:black;  
   text-align: center;
   clear: both;
@@ -236,15 +239,60 @@ form {
   transform: scale(1.1)
 }
 
+/*------AISLES DROPDOWN MENU------*/
+
 .dropdown {
   display: flex;
+  flex-grow: 0;
   flex-direction: column;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  margin-left: 50%;
+  margin-top: 20%;
   transform: translate(-50%, -50%);
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: pink;
 }
 
-.navbar-links .fa{
-margin-right: 8px;
+/* Dropdown Button */
+.dropbtn {
+  background-color: pink;
+  color: black;
+  cursor: pointer;
 }
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  color: #2d52cc;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display:inline-block
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  text-align: left;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
