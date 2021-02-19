@@ -27,7 +27,7 @@ main {
     align-items: center;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #e48d8d;
+    background-color: pink;
 }
 
 nav{
@@ -93,9 +93,9 @@ color: #2d52cc;
   }
   .navbar-links ul{
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     text-align: center;
-    background-color: #e79f9f;
+    background-color: purple;
   }
   .navbar-links li {    
     text-align: center;
@@ -161,13 +161,13 @@ form {
   
   /* Set a style for all buttons */
   button {
-    background-color: #e48d8d;
+    background-color:pink;
     color: black;
     
-    margin: 8px 0;
+    margin: 10px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 25%;
   }
   
   /* Add a hover effect for buttons */
@@ -236,7 +236,7 @@ form {
   transform: scale(1.1)
 }
 
-.dropdown{
+.dropdown {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -245,6 +245,6 @@ form {
   transform: translate(-50%, -50%);
 }
 
-.navbar .navbar-links .dropdown li a{
-  
+.navbar-links .fa{
+margin-right: 8px;
 }
