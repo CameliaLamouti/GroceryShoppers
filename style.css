@@ -259,6 +259,7 @@ form {
   background-color: pink;
   color: black;
   cursor: pointer;
+  
 }
 
 /* Dropdown button on hover & focus */
@@ -296,3 +297,7 @@ form {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+body{
+  background-image: url(apless.jpg);
+}
