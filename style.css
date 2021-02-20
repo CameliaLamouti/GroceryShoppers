@@ -35,7 +35,8 @@ nav{
   text-align: right;
 }
 
-.navbar-links ul{
+.navbar-links ul{  
+    align-items: center;
     display: flex;
     margin: 0;
     padding: 0;
@@ -240,25 +241,12 @@ form {
 }
 
 /*------AISLES DROPDOWN MENU------*/
-
-.dropdown {
-  display: flex;
-  flex-grow: 0;
-  flex-direction: column;
-  position: absolute;
-  margin-left: 50%;
-  margin-top: 20%;
-  transform: translate(-50%, -50%);
-  align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: pink;
-}
-
 /* Dropdown Button */
 .dropbtn {
   background-color: pink;
   color: black;
   cursor: pointer;
+  
 }
 
 /* Dropdown button on hover & focus */
@@ -296,3 +284,50 @@ form {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+body{
+  background-image: url(apless.jpg);
+}
+
+
+.navbar .dropbtn{
+  display: flex;
+  flex-grow: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: pink;
+}
+
+nav .dropbtn{
+flex:1;
+text-align: right;
+}
+
+.navbar-links ul .dropbtn{  
+  align-items: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li .dropbtn{
+display: inline-block;    
+list-style-type: none; 
+}
+
+nav ul li.dropbtn{
+display: inline-block; 
+margin-right: 20px;   
+}
+
+.navbar-links li a .dropbtn{
+text-decoration: none;
+color: black;
+display: block;
+}
+
+.navbar-links li .dropbtn a:hover{ 
+color: #2d52cc;
+}
