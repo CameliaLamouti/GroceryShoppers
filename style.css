@@ -28,6 +28,7 @@ main {
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: pink;
+    width: 100%;
 }
 
 nav{
@@ -119,7 +120,81 @@ color: #2d52cc;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
+    display: flex;
 }
+
+/* Columns */
+.left-column {
+  width: 65%;
+  position: relative;
+}
+ 
+.right-column {
+  width: 35%;
+  margin-top: 60px;
+}
+
+.left-column img {
+ width: 75%;
+ display: flex;
+ margin-top: 60px;
+}
+
+/* Product Description */
+.product-description {
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+.product-description span {
+  font-size: 12px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.product-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+.product-description p li {
+  text-decoration: none;
+}
+/* Product Price */
+.product-price {
+  display: flex;
+  align-items: center;
+}
+.product-price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+ 
+.cart-btn {
+  display: inline-block;
+  background-color: #7DC855;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+  margin-left: 10px;
+}
+.cart-btn:hover {
+  background-color: #64af3d;
+}
+
 
 /*----Front page banner-----*/
 .banner{
@@ -223,6 +298,7 @@ form {
   position: relative;
   bottom: 0;
   width: 100%; 
+  top: 20px;
 }
 
 /*----------Aisles-------------*/
