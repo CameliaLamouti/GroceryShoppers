@@ -6,28 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apples</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" async></script>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="Images/Logo.png" width="125px"></a>
-        </div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>            
-            <span class="bar"></span>            
-            <span class="bar"></span>            
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <nav>
-                <ul>
-                    <li><a href="Products.html">Products</a></li>
-                    <li><a href="Locations.html">Locations</a></li>
-                    <li><a href="Sign In.html">Sign in</a></li>                    
-                    <li><a href="My Cart.html">My Cart</a></li>
-                </ul>
-            </nav>
-        </div>
-    </nav>
+    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <style>
         h2{
             color: red;
@@ -35,8 +15,15 @@
     </style>
 </head>
 <body>
+    
+    <div id="nav-placeholder"></div>
+    <script>
+    $(function(){
+    $("#nav-placeholder").load("navbar.html");
+    });
+    </script>
 
-    <<main class="container">
+    <main class="container">
  
         <!-- Left Column / Bananas Image -->
         <div class="left-column">
@@ -89,6 +76,13 @@
     </div>
   </div>
 </main>
+
+        <div id="footer" class="footer"></div>
+    <script>
+        $(function(){
+          $("#footer").load("footer.html");
+        });
+        </script>
 
 </body>
 </html>
