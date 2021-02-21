@@ -34,10 +34,11 @@
     <main>
 
     <!-- FORM HERE WHICH LINKS TO SIGN IN-->
+    <div class="bg-img">
     <div class="form">
         <form action="action_page.php" method="post">
       
-            <div class="container">
+            <div>
               <label for="first name"><b>First Name</b></label>
               <input type="text" placeholder="Enter First Name" name="first name" required> 
               <label for="last name"><b>Last Name</b></label>
@@ -56,26 +57,25 @@
               <label>
                 <input type="checkbox" checked="checked" name="remember"> I agree to the terms and conditions.
               </label>
+
+              <div style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>      
+              </br>
+                <span class="signin">Already have an account? <a href="Sign In.html">Sign In</a></span>
+              </div>
             </div>
-          
-            <div class="container" style="background-color:#f1f1f1">
-              <button type="button" class="cancelbtn">Cancel</button>      
-            </br>
-              <span class="signin">Already have an account? <a href="Sign In.html">Sign In</a></span>
-            </div>
-          </form>
+       </form>
     </div>
+  </div>
     
       
   </main>
 
     <!--Footer-->
     <div class="footer">
-      <div class="container">
           <h5>Contact Us</h5>
           <h6>Email: GroceryShoppers@gmail.com</h6>
           <h6>Telephone: (+1) 514-229-5439</h6>
-      </div>
     </div>
 
 </body>

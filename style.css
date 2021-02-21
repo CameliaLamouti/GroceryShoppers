@@ -28,6 +28,7 @@ main {
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: pink;
+    width: 100%;
 }
 
 nav{
@@ -119,7 +120,82 @@ color: #2d52cc;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
+    display: flex;
+    padding-bottom: 20px;
 }
+
+/* Columns */
+.left-column {
+  width: 65%;
+  position: relative;
+}
+ 
+.right-column {
+  width: 35%;
+  margin-top: 60px;
+}
+
+.left-column img {
+ width: 75%;
+ display: flex;
+ margin-top: 60px;
+}
+
+/* Product Description */
+.product-description {
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+.product-description span {
+  font-size: 12px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.product-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+.product-description p li {
+  text-decoration: none;
+}
+/* Product Price */
+.product-price {
+  display: flex;
+  align-items: center;
+}
+.product-price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+ 
+.cart-btn {
+  display: inline-block;
+  background-color: #7DC855;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+  margin-left: 10px;
+}
+.cart-btn:hover {
+  background-color: #64af3d;
+}
+
 
 /*----Front page banner-----*/
 .banner{
@@ -130,11 +206,25 @@ color: #2d52cc;
 .banner > .banner-image {
     width: 100%;
     display: block;
+
+}/*------Background image for sign in/up forms-----*/
+.bg-img {
+  /* The image used */
+  background-image: url("Images/food.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 /*------ Bordered form -------*/
 div.form
 {
+    padding: 20px;
     display: block;
     text-align: center;    
     font-family: Arial, Helvetica, sans-serif;
@@ -148,7 +238,8 @@ form {
     display: inline-block;
     text-align: left;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px;    
+    background-color: white;
   }
  
   /* Full-width inputs */
@@ -200,6 +291,13 @@ form {
     float: left;
     padding-top: 16px;
   }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  form {
+    width: 100%;
+  }
+}
   
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
@@ -223,6 +321,7 @@ form {
   position: relative;
   bottom: 0;
   width: 100%; 
+  padding: 10px;
 }
 
 /*----------Aisles-------------*/
