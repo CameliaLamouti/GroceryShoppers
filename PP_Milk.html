@@ -7,29 +7,15 @@
     <title>Milk</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="Images/Logo.png" width="125px"></a>
-        </div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>            
-            <span class="bar"></span>            
-            <span class="bar"></span>            
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <nav>
-                <ul>
-                    <li><a href="Products.html">Products</a></li>
-                    <li><a href="Locations.html">Locations</a></li>
-                    <li><a href="Sign In.html">Sign in</a></li>                    
-                    <li><a href="My Cart.html">My Cart</a></li>
-                </ul>
-            </nav>
-        </div>
-    </nav>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
+    <div id="nav-placeholder"></div>
+    <script>
+    $(function(){
+    $("#nav-placeholder").load("navbar.html");
+    });
+    </script>
     <h2><u>Product Description</u></h1>
         <br>
         <h6>Per 100 grams:</h6>
@@ -65,5 +51,11 @@
             </select>
             <a href="My Cart.html">Add to cart</a>
         </div>
+        <div id="footer" class="footer"></div>
+    <script>
+        $(function(){
+          $("#footer").load("footer.html");
+        });
+        </script>
 </body>
 </html>

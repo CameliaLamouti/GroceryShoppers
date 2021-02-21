@@ -7,27 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Products</title>
         <script src="script.js" defer></script>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="Images/Logo.png" width="125px"></a>
-            </div>
-            <a href="#" class="toggle-button">
-                <span class="bar"></span>            
-                <span class="bar"></span>            
-                <span class="bar"></span>            
-                <span class="bar"></span>
-            </a>
-            <div class="navbar-links">
-                <nav>
-                    <ul>
-                        <li><a href="Products.html">Products</a></li>
-                        <li><a href="Locations.html">Locations</a></li>
-                        <li><a href="Sign In.html">Sign in</a></li>                    
-                        <li><a href="My Cart.html">My Cart</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </nav>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <style>
             ul { list-style-type: square;}
             body{background-color:darkgrey;}
@@ -57,6 +37,13 @@
         </style>
     </head>
     <body>
+        <div id="nav-placeholder"></div>
+    
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("navbar.html");
+    });
+    </script>
         <p>
             <br>
         <h1 class="center">Dairy and Eggs</h1><br>
@@ -80,13 +67,12 @@
     <br/>
 
     <!--Footer-->
-    <div class="footer">
-        <div class="container">
-            <h5>Contact Us</h5>
-            <h6>Email: GroceryShoppers@gmail.com</h6>
-            <h6>Telephone: (+1) 514-229-5439</h6>
-        </div>
-    </div>
+    <div id="footer" class="footer"></div>
+    <script>
+        $(function(){
+          $("#footer").load("footer.html");
+        });
+        </script>
 
 
 
