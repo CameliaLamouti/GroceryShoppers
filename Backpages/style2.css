@@ -54,7 +54,7 @@ body {
 
 .content .header{
   background: #fff;
-  color: #717171;
+  color: black;
   border-bottom: 5px solid #000000;
 }
 
@@ -67,4 +67,39 @@ body {
 
 .content .info .inventory{
   padding-right: 50px;
+}
+
+/* Set a style for all buttons */
+ button {
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   position: left;
+ }
+
+ .content .button{
+   align-items: left;
+}
+
+ /* Extra style for the delete button (red) */
+ .deletebtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+ /* Extra style for the add button (green) */
+ .addbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: green;
+}
+ /* Extra style for the edit button (grey) */
+ .editbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: grey;
 }

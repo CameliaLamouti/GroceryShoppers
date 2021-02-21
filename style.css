@@ -131,21 +131,23 @@ color: #2d52cc;
 }
  
 .right-column {
-  width: 35%;
+  width: 350%;
   margin-top: 60px;
 }
 
 .left-column img {
- width: 75%;
- display: flex;
- margin-top: 60px;
+  width: 90%;
+  padding: 60px;
+  float: left;
+  width:  600px;
+  height: 550px;
+  object-fit: cover;
 }
 
 /* Product Description */
 .product-description {
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: 1px solid #E1E8EE;
-  margin-bottom: 20px;
 }
 .product-description span {
   font-size: 12px;
