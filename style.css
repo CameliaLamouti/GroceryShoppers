@@ -121,6 +121,7 @@ color: #2d52cc;
     padding-left: 25px;
     padding-right: 25px;
     display: flex;
+    padding-bottom: 20px;
 }
 
 /* Columns */
@@ -205,11 +206,25 @@ color: #2d52cc;
 .banner > .banner-image {
     width: 100%;
     display: block;
+
+}/*------Background image for sign in/up forms-----*/
+.bg-img {
+  /* The image used */
+  background-image: url("Images/food.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 /*------ Bordered form -------*/
 div.form
 {
+    padding: 20px;
     display: block;
     text-align: center;    
     font-family: Arial, Helvetica, sans-serif;
@@ -223,7 +238,8 @@ form {
     display: inline-block;
     text-align: left;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px;    
+    background-color: white;
   }
  
   /* Full-width inputs */
@@ -275,6 +291,13 @@ form {
     float: left;
     padding-top: 16px;
   }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  form {
+    width: 100%;
+  }
+}
   
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
@@ -298,7 +321,7 @@ form {
   position: relative;
   bottom: 0;
   width: 100%; 
-  top: 20px;
+  padding: 10px;
 }
 
 /*----------Aisles-------------*/
