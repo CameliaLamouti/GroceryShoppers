@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(147, 116, 197);
+  overflow-x: hidden;
+}
+
+.sidenav .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.sidenav a .fas {
+  width: 25px;
+}
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+
+.content .header{
+  background: #fff;
+  color: black;
+  border-bottom: 5px solid #000000;
+}
+
+.content .info{
+  margin: 20px;
+  color: rgb(0, 0, 0);
+  padding-top: 20 px;
+ 
+}
+
+.content .info .inventory{
+  padding-right: 50px;
+}
+
+/* Set a style for all buttons */
+ button {
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   position: left;
+ }
+
+ .content .button{
+   align-items: left;
+}
+
+ /* Extra style for the delete button (red) */
+ .deletebtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+ /* Extra style for the add button (green) */
+ .addbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: green;
+}
+ /* Extra style for the edit button (grey) */
+ .editbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: grey;
+}
