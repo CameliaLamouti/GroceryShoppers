@@ -85,7 +85,12 @@ body {
  .content .button{
    align-items: left;
 }
-
+/* Extra style for the save button (green) */
+.savebtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: green;
+}
  /* Extra style for the delete button (red) */
  .deletebtn {
   width: auto;
@@ -111,3 +116,49 @@ table, td, th{
   border-collapse: collapse;
   padding: 10px;
 }
+
+.container{
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+/* Columns */
+.left-column {
+width: 65%;
+position: relative;
+}
+
+.right-column {
+width: 350%;
+margin-top: 60px;
+}
+
+.left-column img {
+width: 90%;
+padding: 60px;
+float: left;
+width:  600px;
+height: auto;
+object-fit: cover;
+}
+
+  /* Responsive layout  */
+  @media screen and (max-width: 600px) {
+    .container{
+      width: 100%;
+      flex-direction: column;
+    }
+    .left-column{
+      width: 100%;
+    }
+    .right-column{
+      width: 100%;
+    }
+    .left-column img{
+      max-width: 100%;
+    }
+  }

@@ -113,8 +113,6 @@ color: #2d52cc;
 
 }
 
-
-
 .container{
     max-width: 1300px;
     margin: auto;
@@ -132,7 +130,7 @@ color: #2d52cc;
  
 .right-column {
   width: 350%;
-  margin-top: 60px;
+  padding: 60px;
 }
 
 .left-column img {
@@ -140,9 +138,26 @@ color: #2d52cc;
   padding: 60px;
   float: left;
   width:  600px;
-  height: 550px;
+  height: auto;
   object-fit: cover;
 }
+
+  /* Responsive layout  */
+  @media screen and (max-width: 600px) {
+    .container{
+      width: 100%;
+      flex-direction: column;
+    }
+    .left-column{
+      width: 100%;
+    }
+    .right-column{
+      width: 100%;
+    }
+    .left-column img{
+      max-width: 100%;
+    }
+  }
 
 /* Product Description */
 .product-description {
