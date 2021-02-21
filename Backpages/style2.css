@@ -52,12 +52,14 @@ body {
   padding-left: 20px;
 }
 
+/* Style content header */
 .content .header{
   background: #fff;
   color: black;
   border-bottom: 5px solid #000000;
 }
 
+/* Style content info */
 .content .info{
   margin: 20px;
   color: rgb(0, 0, 0);
