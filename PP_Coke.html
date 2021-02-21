@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coke</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <script>
+    $(function(){
+    $("#nav-placeholder").load("navbar.html");
+    });
+    </script>
+    <main class="container">
+ 
+        <!-- Left Column Imafe-->
+        <div class="left-column">
+          <img src="Images/coke.jpg" alt="">
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+ 
+         <!-- Product Description -->
+        <div class="product-description">
+          <h1>Coke</h1>
+          <p>
+              <h3></br>Description: Coca-Cola beverage, made in the United States.</h3>
+              <h3></br>Nutritional Information</h3>
+                <li>Calories: 60</li>
+                <li>Total Fat: 0.4g</li>
+                <li>Saturated fat: 0.1g</li>
+                <li>Cholestorol: 5mg</li>
+                <li>Sodium: 36mg</li>
+                <li>Potassium: 150mg</li>
+                <li>Total Carbohydrate: 10g</li>
+                <li>Sugar: 3.2g</li>
+                <li>Protein: 10g</li>
+            
+          </p>
+        </div>
+ 
+ 
+    <!-- Product Pricing + Add to cart -->
+    <div class="product-price">
+      <span>$4.00/pack</span>
+      <div>
+
+        <label for="amount">Quantity</label>
+        <select name="amount">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+      <a href="My Cart.html" class="cart-btn">Add to cart</a>
+    </div>
+  </div>
+</main>
+    <div id="footer" class="footer"></div>
+    <script>
+    $(function(){
+      $("#footer").load("footer.html");
+    });
+    </script>
+</body>
+</html>
