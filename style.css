@@ -111,6 +111,10 @@ color: #2d52cc;
     display:flex;
   }
 
+  .cart-info p{
+    display: none;
+  }
+
 }
 
 .container{
@@ -493,5 +497,11 @@ td img{
 .total-price table{
   border-top: 3px solid pink;
   width: 100%;
-  max-width: 350px;
+  max-width: 4000px;
+}
+td :last-child{
+  text-align: right;
+}
+th :last-child{
+  text-align: right;
 }
