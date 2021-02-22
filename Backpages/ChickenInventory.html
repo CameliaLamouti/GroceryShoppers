@@ -7,16 +7,15 @@
     <title>Backstore Page</title>
     <link rel="stylesheet" href="style2.css">
     <script src="https://kit.fontawesome.com/d27ba70d65.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    <div class="sidenav">
-        <img class="center" src="../Images/Logo.png" width="125px">
-        <ul>
-            <li><a href="ProductList.html"><i class="fas fa-list"></i>Product list</a></li>
-            <li><a href="Users.html"><i class="fas fa-user"></i>User list</a></li>
-            <li><a href="ShoppingBag.html"><i class="fas fa-shopping-bag"></i>Order list</a></li>
-        </ul>    
-    </div>
+  <div id="sidebar"></div>
+  <script>
+  $(function(){
+    $("#sidebar").load("sidenav.html");
+  });
+  </script>
 
     <div class="content">
       <main class="container">
