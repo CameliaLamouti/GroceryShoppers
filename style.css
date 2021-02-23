@@ -12,6 +12,10 @@ body{
   min-height: 100vh;
 }
 
+.center{
+  align-self:center;
+}
+
 main {
   flex-grow: 1;
 }

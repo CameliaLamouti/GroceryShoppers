@@ -179,4 +179,25 @@ object-fit: cover;
     .left-column img{
       max-width: 100%;
     }
+
+    .form{
+        width: 100%;
+        flex-direction: column;
+      }
+  
+    .table-responsive{
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
   }
