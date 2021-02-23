@@ -7,13 +7,13 @@ Name : ID : GitHub username
 
 -Hamna Akhter : 40078011 : hamna-akh
 
--Camelia : 40175084 : CameliaLamouti
+-Camelia Lamouti : 40175084 : CameliaLamouti
 
 -Chris Karabatsos: 40132730 : cckarabatsos
 
--younes gharbili (yenzo) : 40131588 : younescs
+-Younes Gharbili (yenzo) : 40131588 : younescs
 
 -Tahmid Rahman: 40174589: drbladz
 
--Patrick : 40175307 : Patkeenz
+-Patrick Keenan: 40175307 : Patkeenz
 
