@@ -71,7 +71,7 @@ body {
 /* Style the content */
 .content {
   margin-left: 200px;
-  padding-left: 20px;
+  padding: 20px;
 }
 
 /* Style content header */
