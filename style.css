@@ -172,6 +172,9 @@ color: #2d52cc;
     .left-column img{
       max-width: 100%;
     }
+    .product-price{
+      flex-direction: column;
+    }
   }
 
 /* Product Description */
