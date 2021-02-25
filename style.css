@@ -242,12 +242,13 @@ color: #2d52cc;
     width: 100%;
     display: block;
 
-}/*------Background image for sign in/up forms-----*/
+}
+
+/*------Background image for sign in/up forms-----*/
 .bg-img {
   /* The image used */
   background-image: url("Images/food.jpg");
-
-  min-height: 380px;
+  min-height: 800px;
 
   /* Center and scale the image nicely */
   background-position: center;
