@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bread and Bakery Products</title>
+        <script src="../script.js" defer></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <style>
+            ul { list-style-type: square;}
+            body{background-color:darkgrey;}
+            h1.center{
+                text-align: center;
+
+            }
+            h3{color: crimson;
+                
+            }
+            .center{
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+      width: 250px;
+    }
+    p.center{
+        text-align:center;
+    }
+        h3{
+            font-size:larger
+        }
+        ol{
+            font-size:larger
+        }
+            
+        </style>
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <script>
+        $(function(){
+        $("#nav-placeholder").load("../navbar.html");
+        });
+        </script>
+        <p>
+            <br>
+        <h1 class="center">Bread and Bakery</h1><br>
+        <ol>
+            <br/>
+            <li>Bread<img src= "../Images/Bread.jpg" class="center"></li>
+            <p class="center"><a href="Beverages/PP_Coke.html">More Description on Bread</a></p>
+            <hr>
+            <br/>
+            <li>Burger Buns<img src= "../Images/BurgerBuns.jpg" class="center"></li>
+            <p class="center"><a href="Beverages/PP_Crush.html">More Description on Burger Buns</a></p>
+            <hr>
+            <br/>
+            <li>Baguettes<img src= "../Images/baguette.jpeg" class="center"></li>
+            <p class="center"><a href="Beverages/PP_Nestea.html">More Description on Baguettes</a></p>
+            <hr>
+            <br/>
+            </ol>
+        <h3></h3>
+    </p>
+    <br/>
+
+    <!--Footer-->
+    <div id="footer" class="footer"></div>
+    <script>
+        $(function(){
+          $("#footer").load("../footer.html");
+        });
+        </script>
+
+
+
+    </body>
+</html>
