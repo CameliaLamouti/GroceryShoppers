@@ -92,42 +92,6 @@ color: #2d52cc;
   border-radius: 10px;
 }
 
-@media(max-width: 600px){
-  .toggle-button{
-    display: flex;
-  }
-  .navbar-links {
-    display: none;
-    width: 100%;
-  }
-  .navbar{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .navbar-links ul{
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    background-color: rgb(252, 203, 211);
-  }
-  .navbar-links li {    
-    text-align: center;
-    flex-direction: column;
-  }
-  
-  .navbar-links li a {
-    padding: .5rem 1rem;
-  }
-  .navbar-links.active {
-    display:flex;
-  }
-
-  .cart-info p{
-    display: none;
-  }
-
-}
-
 .container{
     max-width: 1300px;
     margin: auto;
@@ -157,7 +121,7 @@ color: #2d52cc;
   object-fit: cover;
 }
 
-  /* Responsive layout  */
+  /* Responsive layout samll screen */
   @media screen and (max-width: 600px) {
     .container{
       width: 100%;
@@ -174,6 +138,41 @@ color: #2d52cc;
     }
     .product-price{
       flex-direction: column;
+    }
+    .toggle-button{
+    display: flex;
+    }
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+    .navbar{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar-links ul{
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background-color: rgb(252, 203, 211);
+    }
+    .navbar-links li {    
+      text-align: center;
+      flex-direction: column;
+    }
+    
+    .navbar-links li a {
+      padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+      display:flex;
+    }
+
+    .cart-info p{
+      display: none;
+    }  
+    form {
+    width: 100%;
     }
   }
 
@@ -236,6 +235,8 @@ color: #2d52cc;
 .banner{
     width: 100% ;
     display: block;
+    text-align: center;
+    background-color: #369939;
 }
 
 .banner > .banner-image {
@@ -327,14 +328,7 @@ form {
     float: left;
     padding-top: 16px;
   }
-
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  form {
-    width: 100%;
-  }
-}
-  
+ 
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
     span.psw {
