@@ -245,6 +245,14 @@ color: #2d52cc;
 
 }
 
+/*------Front Page Weekly Deals------*/
+.WordsBanner{
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgb(207, 151, 207);
+}
+
 /*------Background image for sign in/up forms-----*/
 .bg-img {
   /* The image used */
@@ -356,13 +364,15 @@ form {
 
 /*----------Aisles-------------*/
 .Aisles {
-  margin: 50px 0;;
+  margin: 50px;
+  text-align: center;
 }
 .Aisles img {
   width: 100%;
   padding: 20px 0;
   transition: 1s;
   cursor: pointer;
+  max-height: 250px;
 }
 
 .Aisles img:hover{
