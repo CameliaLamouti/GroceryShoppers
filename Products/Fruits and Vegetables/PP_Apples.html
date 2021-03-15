@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apples</title>
     <link rel="stylesheet" href="../../style.css">
-    <script src="../../script.js" defer></script>
+    <script src="../../script.js" defer></script> 
+    <script src="../../mycart.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <style>
         h2{
@@ -26,16 +27,16 @@
     <main class="container">
  
         <!-- Left Column / Bananas Image -->
-        <div class="left-column">
-          <img src="../../Images/appless.jpg" alt="">
+        <div class="left-column ">
+          <img class="shop-item-image" src="../../Images/appless.jpg" alt="">
         </div>
 
         <!-- Right Column -->
-        <div class="right-column">
+  <div class="right-column">
  
          <!-- Product Description -->
         <div class="product-description">
-          <h1>Apples</h1>
+          <h1 class="shop-item-title" >Apples</h1>
           <p>
               <h3></br>Description: Imported from China</h3>
               <h3></br>Nutritional Information</h3>
@@ -55,7 +56,7 @@
  
     <!-- Product Pricing + Add to cart -->
     <div class="product-price">
-      <span>$0.79/lb</span>
+      <span class= "shop-item-price">$0.79/lb</span>
       <div>
         <label for="Type">Type</label>
         <select name="Type">
@@ -77,8 +78,8 @@
             <option value="9">9</option>
             <option value="10">10</option>
         </select>
-    </div>
-      <a href="../../My Cart.html" class="cart-btn">Add to cart</a>
+      </div>
+      <button class="shop-item-button"><a class="cart-btn" href="../../MyCart.html">Add to cart</a></button>
     </div>
   </div>
 </main>

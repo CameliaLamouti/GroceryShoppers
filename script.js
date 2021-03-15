@@ -25,25 +25,3 @@ function myFunction() {
       }
     }
   }
-
-function calculate() {
-  var applesqty = document.getElementById("applesqty").value;
-  var beefqty = document.getElementById("beefqty").value;
-  var shrimpqty = document.getElementById("shrimpqty").value;
-
-  document.getElementById("applestot").innerHTML = "$"+applesqty*0.79;
-  document.getElementById("beeftot").innerHTML = "$"+beefqty*10.00;
-  document.getElementById("shrimptot").innerHTML = "$"+shrimpqty*13.99;
-
-  var subtotal = "$"+(applesqty*0.79 + beefqty*10 + shrimpqty*13.99).toFixed(2);
-  var nbitems = parseInt(applesqty)+parseInt(beefqty)+parseInt(shrimpqty);
-  var qst = "$"+((applesqty*0.79 + beefqty*10 + shrimpqty*13.99)*0.09975).toFixed(2);
-  var gst = "$"+((applesqty*0.79 + beefqty*10 + shrimpqty*13.99)*0.05).toFixed(2);
-  var total = "$"+((applesqty*0.79 + beefqty*10 + shrimpqty*13.99)+((applesqty*0.79 + beefqty*10 + shrimpqty*13.99)*0.09975)+((applesqty*0.79 + beefqty*10 + shrimpqty*13.99)*0.05)).toFixed(2);
-
-  document.getElementById("subtotal").innerHTML = subtotal;
-  document.getElementById("nbitems").innerHTML = nbitems;
-  document.getElementById("qst").innerHTML = qst;
-  document.getElementById("gst").innerHTML = gst;
-  document.getElementById("total").innerHTML = total;
-}
