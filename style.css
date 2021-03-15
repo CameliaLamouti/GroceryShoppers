@@ -253,11 +253,18 @@ color: #2d52cc;
   background-color: rgb(207, 151, 207);
 }
 
+.WordsBanner1{
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgb(224, 83, 79);
+}
+
 /*------Background image for sign in/up forms-----*/
 .bg-img {
   /* The image used */
   background-image: url("Images/food.jpg");
-  min-height: 800px;
+  min-height: 900px;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -372,6 +379,7 @@ form {
   padding: 20px 0;
   transition: 1s;
   cursor: pointer;
+  min-height: 250px;
   max-height: 250px;
 }
 
