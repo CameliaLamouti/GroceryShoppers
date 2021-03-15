@@ -15,9 +15,24 @@
     <style>
        h1.center{
            text-align: center;
+           
+           color: black;
+       }
+       h5.blah{
+           text-align: center;
            background-color: blue;
            color: white;
        }
+       p{
+           text-align: center;
+           font: caption;
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           font-size: large;
+       }
+      
+
+       
+       
     </style>
     </head>
     <body>
@@ -31,13 +46,50 @@
     <main>
 
     <h1 class="center">Contact Us</h1>
-    <p>We're here and we're listening!</p>
+    <h5 class="blah">Notice! : Please be aware that we are currently receiving an enormous amount of messages. We are prioritizing COVID-19 messages. Thank you for understanding
+        and will try to answer as quick as possible.
+    </h5>
+    <p><b>We're here and we're listening! If you have any questions or concerns regarding prices for in-store or online, please fill out the form below and we will 
+        answer as soon as possible! If you have any comments or suggestions please fill out the form below as well!</b></p>
+    
 
+    <div class="form">
+        <form>
+        <label for="website">Website</label>
+        <input type="checkbox" name="agree"
+        
+        <label for="mobile application">Mobile Application</label>
+        <input type="checkbox" name="agree"
+        <label for="Grocery Shoppers Online"> Grocery Shoppers Online</label>
+        <input type="checkbox" name="agree">
+        <label for="Grocery Shoppers in-store">Grocery Shoppers in-store</label>
+        <input type="checkbox" name="agree">
+        <br/>
+        <label for="First Name">First Name</label>
+        <input type="text" placeholder="Enter First Name" name="First Name" required>
+        <label for="Last Name">Last Name</label>
+        <input type="text" placeholder="Enter Last Name" name="Last Name" required>
+        <label for="Email Address">Email Address</label>
+        <input type="text" placeholder="Enter Email Address" name="Email Addrsss" required>
+        <label for="Phone Number">Phone Number</label>
+        <input type="text" placeholder="+1 (514) xxx xxxx" name="Phone Number" required>
+        <label for="comments">comments</label>
+        <textarea name="comments" rows="10" columns = "30"></textarea>
+        <button type="Send">Send</button>
+    </form>
+    </div>
+    
+    
 
     
 
     </main> 
-
+    <div id="footer" class="footer"></div>
+    <script>
+        $(function(){
+          $("#footer").load("footer.html");
+        });
+        </script>
 
     </body>
 </html>
