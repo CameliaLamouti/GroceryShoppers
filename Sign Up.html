@@ -22,24 +22,23 @@
     <!-- FORM HERE WHICH LINKS TO SIGN IN-->
     <div class="bg-img">
     <div class="form">
-        <form action="action_page.php" method="post">
-      
+        <form method="post">  
             <div>
               <label for="first name"><b>First Name</b></label>
-              <input type="text" placeholder="Enter First Name" name="first name" required> 
+              <input type="text" placeholder="Enter First Name" name="first name" > 
               <label for="last name"><b>Last Name</b></label>
-              <input type="text" placeholder="Enter Last Name" name="last name" required> 
+              <input type="text" placeholder="Enter Last Name" name="last name" > 
               <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>              
+              <input type="text" placeholder="Enter Email" name="email" >              
               <label for="email"><b>Confirm Email</b></label>
-              <input type="text" placeholder="Re-enter Email" name="email" required>
+              <input type="text" placeholder="Re-enter Email" name="email" >
           
               <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>              
+              <input type="password" placeholder="Enter Password" name="psw" >              
               <label for="psw"><b>Confirm Password</b></label>
-              <input type="password" placeholder="Re-enter Password" name="psw" required>
+              <input type="password" placeholder="Re-enter Password" name="psw" >
           
-              <button type="submit">Create Account</button>
+              <button type="submit" onsubmit="return createAccount();">Create Account</button>
               <label>
                 <input type="checkbox" checked="checked" name="remember"> I agree to the terms and conditions.
               </label>

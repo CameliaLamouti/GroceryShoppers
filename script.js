@@ -74,4 +74,52 @@ document.getElementsByClassName("show-reset")[0].addEventListener("click",functi
   document.getElementById("submit-btn").innerText = "Reset password";
 });
 
+/*Password Reset*/
+function resetPassword(){
+  var email = document.getElementById("email").value;
+  var newpass = document.getElementById("newpass").value;
+  var confirmpass = document.getElementById("confirmpass").value;
+  if (email!="" && newpass!= "" && confirmpass!= ""){
+      if (newpass==confirmpass){
+        alert ("Success! Check your inbox for the next steps.");
+        return true;
+      }
+      else {
+        alert ("New Password And Confirmed Password Do Not Match.");
+        return false;
+      }
+  }
+  else{
+    alert("All Fields Are Required.")
+    return false;
+  }
+}
 
+function createAccount(){
+  var first_name = document.getElementById("firstname").value;
+  var last_name = document.getElementById("lasttname").value;
+  var email = document.getElementById("email").value;
+  var confirmemail = document.getElementById("confirmemail").value;
+  var pass = document.getElementById("pass").value;
+  var confirmpass = document.getElementById("confirmpass").value;
+  if (first_name!= "" && last_name!= "" && email!= "" && confirmemail!= "" && pass!= "" && confirmpass!= "" ){
+    if (email == confirmemail){
+      if (pass == confirmpass){
+        alert("You Have Succesfully Created An Account!");
+        return true;
+      }
+      else{
+        alert("Your Password And Confirm Password Do Not Match.")
+        return false;
+      }
+    }
+    else{
+      alert("Your Email And Confirm Email Do Not Match.")
+      return false;
+    }
+  }
+  else{
+    alert("Please fill in all required fields.")
+    return false;
+  }
+}
