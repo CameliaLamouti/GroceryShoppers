@@ -257,7 +257,7 @@ color: #2d52cc;
 .bg-img {
   /* The image used */
   background-image: url("Images/food.jpg");
-  min-height: 800px;
+  min-height: 900px;
 
   /* Center and scale the image nicely */
   background-position: center;
