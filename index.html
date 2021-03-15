@@ -39,7 +39,15 @@
             <div class="row">
                 <div class="col-md-4">
                     <a href="Products/Fruits and Vegetables/PP_Bananas.html"><img src="Images/bananas.jpg">Shop now for bananas</a>
-                </br>Only $0.79/lbs
+                </br>
+
+                <div id="price-placeholder"></div>
+                <script>
+                $(function(){
+                  $("#price-placeholder").load("Products/Fruits and Vegetables/PP_Bananas.html/product-price");
+                });
+                </script>  
+                              
                 </div>
                 <div class="col-md-4">
                     <a href="Products/Bread and Bakery/PP_Baguettes.html"><img src="Images/baguette.jpeg">Shop now for Baguettes</a>
