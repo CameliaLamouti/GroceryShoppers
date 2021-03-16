@@ -79,47 +79,48 @@ function resetPassword(){
   var email = document.getElementById("email").value;
   var newpass = document.getElementById("newpass").value;
   var confirmpass = document.getElementById("confirmpass").value;
+  var output;
   if (email!="" && newpass!= "" && confirmpass!= ""){
       if (newpass==confirmpass){
-        alert ("Success! Check your inbox for the next steps.");
-        return true;
+        output=("Success! Your Password Has Been Reset.");
       }
       else {
-        alert ("New Password And Confirmed Password Do Not Match.");
-        return false;
+        output=("New Password And Confirmed Password Do Not Match.");
       }
   }
   else{
-    alert("All Fields Are Required.")
-    return false;
+    output=("All Fields Are Required.");
   }
+  document.getElementById("writing").innerHTML = output;
+
 }
 
 function createAccount(){
-  var first_name = document.getElementById("firstname").value;
-  var last_name = document.getElementById("lasttname").value;
+  var firstname = document.getElementById("firstname").value;
+  var lastname = document.getElementById("lastname").value;
   var email = document.getElementById("email").value;
   var confirmemail = document.getElementById("confirmemail").value;
   var pass = document.getElementById("pass").value;
   var confirmpass = document.getElementById("confirmpass").value;
-  if (first_name!= "" && last_name!= "" && email!= "" && confirmemail!= "" && pass!= "" && confirmpass!= "" ){
-    if (email == confirmemail){
-      if (pass == confirmpass){
+if(document.getElementById("checkbox").checked){
+  if (firstname!= "" && lastname!= "" && email!= "" && confirmemail!= "" && pass!= "" && confirmpass!= ""){
+    if (email==confirmemail){
+      if (pass==confirmpass){
         alert("You Have Succesfully Created An Account!");
-        return true;
       }
       else{
         alert("Your Password And Confirm Password Do Not Match.")
-        return false;
       }
     }
     else{
       alert("Your Email And Confirm Email Do Not Match.")
-      return false;
     }
   }
   else{
     alert("Please fill in all required fields.")
-    return false;
   }
+}
+else{
+  alert("You Must Agree To The Terms And Conditions.")
+}
 }
