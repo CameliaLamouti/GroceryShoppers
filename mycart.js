@@ -53,15 +53,17 @@ function removeCartItem() {
         console.log(shopItem);
         var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
         console.log(title);
-        var price = parseFloat(shopItem.getElementsByClassName('shop-item-price')[0].innerText.replace('$', '').replace('/lb', ''));
+        var price = parseFloat(shopItem.getElementsByClassName('shop-item-price')[0].innerText.replace('$', '').replace('/lb', '').replace('/pack', ''));
         console.log(price);
         var imageSrc = shopItem.parentElement.getElementsByClassName('shop-item-image')[0].src;
         console.log(imageSrc);
-        addItemToCart(title, price, imageSrc);
-        updateCartTotal()
+        var quantity = shopItem.getElementsByClassName('qty')[0].value;
+        console.log(quantity); 
+        addItemToCart(title, price, imageSrc, quantity);
+        updateCartTotal();
     }
 
-    function addItemToCart(title, price, imageSrc) {
+    function addItemToCart(title, price, imageSrc, quantity) {
         var cartRow = document.createElement('tr')
         cartRow.classList.add('cart-row')
         
@@ -73,7 +75,32 @@ function removeCartItem() {
                 alert('This item is already added to the cart')
                 return
             }
-        }}
+        }
+
+        var cartRowContents = `
+                    <td>
+                            <div class="cart-info">
+                                <img src="${imageSrc}" >
+                                <div>
+                                    <p class="cart-item-title">${title}</p>
+                                    <small><b>Price:</b> $${price}</small></br>
+
+                                    <button class="btn btn-danger"> REMOVE </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td> <input class="cart-quantity-input" type="number" value="${quantity}"></td>
+                        <td class="cart-price">$${price}
+                    
+                    </td> `
+
+        cartRow.innerHTML = cartRowContents;
+        cartItems.append(cartRow)
+        cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+        cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+    
+    
+    }
 
 
     function updateCartTotal()  {
@@ -106,20 +133,10 @@ function removeCartItem() {
         else
             shipping = 4.50;
         var total = Math.round((subTotal + taxesQST + taxesGST + shipping) * 100) / 100;
-        //window.sessionStorage.setItem("s",subTotal.toFixed(2));
-        window.sessionStorage.setItem("taxesQST",taxesQST .toFixed(2));
-        window.sessionStorage.setItem("taxesGST",taxesGST.toFixed(2));
-        window.sessionStorage.setItem("shipping",shipping.toFixed(2));
-        window.sessionStorage.setItem("total",total.toFixed(2));
-      
-       //document.getElementsByClassName('cart-subtotal-price')[0].innerHTML = '$' + window.sessionStorage.getItem("subtotal");
-        document.getElementsByClassName('cart-taxesQST-price')[0].innerHTML = '$' + window.sessionStorage.getItem("taxesQST");
-        document.getElementsByClassName('cart-taxesGST-price')[0].innerHTML = '$' + window.sessionStorage.getItem("taxesGST");
-        document.getElementsByClassName('cart-shipping-price')[0].innerHTML = '$' + window.sessionStorage.getItem("shipping");
-        
-        document.getElementsByClassName('cart-total-price')[0].innerHTML = '$' + window.sessionStorage.getItem("total");
-       
-        console.log(sessionStorage);
+        document.getElementsByClassName('cart-taxesQST-price')[0].innerHTML = '$' + taxesQST;
+        document.getElementsByClassName('cart-taxesGST-price')[0].innerHTML = '$' +taxesGST;
+        document.getElementsByClassName('cart-shipping-price')[0].innerHTML = '$' + shipping;
+        document.getElementsByClassName('cart-total-price')[0].innerHTML = '$' + total;
       
     }
     

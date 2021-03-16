@@ -84,3 +84,5 @@ function add_row()
  document.getElementById("new_costPost").value="";
  document.getElementById("new_orderSum").value="";
 }
+
+document.getElementsByClassName('price').innerHTML = 12;
