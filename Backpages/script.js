@@ -18,6 +18,7 @@ function edit_row(no)
  firstName.innerHTML="<input type='text' id='firstName_text"+no+"' value='"+firstName_data+"'>";
  lastName.innerHTML="<input type='text' id='lastName_text"+no+"' value='"+lastName_data+"'>";
  email.innerHTML="<input type='text' id='email_text"+no+"' value='"+email_data+"'>";
+
 }
 
 function save_row(no)
