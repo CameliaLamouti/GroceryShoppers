@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Page</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://kit.fontawesome.com/d27ba70d65.js" crossorigin="anonymous"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>    
+    <script src="orderlist.js" defer></script>
+
+    <div id="sidebar"></div>
+    <script>
+    $(function(){
+        $("#sidebar").load("sidenav.html");
+    });
+    </script>
+
+</head>
+<body>
+
+    <div class="content">
+        <div class= "header">
+            <h2>List of Orders</h2> 
+        </div>
+        <div class="info">
+            <p class="font-italic mb-1">Add a new order, edit information of existing order, or delete existing order.</p>
+        </div> 
+
+
+        <div id="wrapper" style="overflow-x:auto;">
+            <table class="center" cellspacing=2 cellpadding=5 id="data_table">
+                <tr>
+                <th>Order Number</th>
+                <th>Order Cost (pre tax)</th>
+                <th>Order Cost (post tax)</th>
+                <th>Order Summary</th>
+                <th></th>
+                </tr>
+
+                <tr id="row1">
+                <td id="orderNb_row1">1</td>
+                <td id="costPre_row1">85.33$</td>
+                <td id="costPost_row1">98.13$</td>
+                <td id="orderSum_row1">7 red apple (approx. 3lbs), 2lbs salmon, 5lbs tuna, 2lbs shrimp, 1lb brie cheese</td>
+                <td>
+                <input type="button" class="editbtn" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                <input type="button" class="savebtn" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                <input type="button" class="deletebtn" value="Delete" class="delete" onclick="delete_row('1')">
+                </td>
+                </tr>
+
+                <tr id="row2">
+                <td id="orderNb_row2">2</td>
+                <td id="costPre_row2">44.77$</td>
+                <td id="costPost_row2">51.49$</td>
+                <td id="orderSum_row2">7 bananas (approx 4lbs), 3lbs beef, 1 liter 2% milk, 1 pack strawberry yogurt, 1 pack banana yogurt</td>
+                <td>
+                <input type="button" class="editbtn" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+                <input type="button" class="savebtn" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+                <input type="button" class="deletebtn" value="Delete" class="delete" onclick="delete_row('2')">
+                </td>
+                </tr>
+
+                <tr id="row3">
+                <td id="orderNb_row3">3</td>
+                <td id="costPre_row3">44.85$</td>
+                <td id="costPost_row3">51.58$</td>
+                <td id="orderSum_row3">15 packs iced tea</td>
+                <td>
+                <input type="button" class="editbtn" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+                <input type="button" class="savebtn" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+                <input type="button" class= "deletebtn" value="Delete" class="delete" onclick="delete_row('3')">
+                </td>
+                </tr>
+
+                <tr id="row4">
+                <td id="orderNb_row4">4</td>
+                <td id="costPre_row4">13.30$</td>
+                <td id="costPost_row4">15.30$</td>
+                <td id="orderSum_row4">2lbs broccoli, 2lbs chicken, 1lb pork, 0.5lbs mozzarella cheese</td>
+                <td>
+                <input type="button" class="editbtn" id="edit_button4" value="Edit" class="edit" onclick="edit_row('4')">
+                <input type="button" class="savebtn" id="save_button4" value="Save" class="save" onclick="save_row('4')">
+                <input type="button" class= "deletebtn" value="Delete" class="delete" onclick="delete_row('4')">
+                </td>
+                </tr>
+
+                <tr>
+                <td><input type="text" id="new_orderNb"></td>
+                <td><input type="text" id="new_costPre"></td>
+                <td><input type="text" id="new_costPost"></td>
+                <td><input type="text" id="new_orderSum"></td>
+                <td><input type="button" class="addbtn" class="add" onclick="add_row();" value="Add Row"></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>

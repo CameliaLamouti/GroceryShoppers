@@ -13,7 +13,7 @@ function edit_row(no)
 	
  var firstName_data=firstName.innerHTML;
  var lastName_data=lastName.innerHTML;
- var email_data=email.innerHTML;
+ var email_data=email.innerHTML; 
 	
  firstName.innerHTML="<input type='text' id='firstName_text"+no+"' value='"+firstName_data+"'>";
  lastName.innerHTML="<input type='text' id='lastName_text"+no+"' value='"+lastName_data+"'>";
