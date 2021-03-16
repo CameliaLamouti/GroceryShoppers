@@ -54,7 +54,7 @@ function add_row()
        
     var table=document.getElementById("data_table");
     var table_len=(table.rows.length)-1;
-    var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td></td><td></td><td></td><td id='ProductPrice_row"+table_len+"'>"+new_ProductPrice+"</td><td id='ProductDescription_row"+table_len+"'>"+new_ProductDescription+"</td><td id='ProductInventory_row"+table_len+"'>"+new_ProductInventory+"</td><td><input type='button' class='editbtn' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' class='savebtn' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' class='deletebtn' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+    var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td></td><td></td><td></td><td id='ProductInventory_row"+table_len+"'>"+new_ProductInventory+"</td><td id='ProductPrice_row"+table_len+"'>"+new_ProductPrice+"</td><td id='ProductDescription_row"+table_len+"'>"+new_ProductDescription+"</td><td><input type='button' class='editbtn' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' class='savebtn' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' class='deletebtn' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
    
     document.getElementById("new_ProductPrice").value="";
     document.getElementById("new_ProductDescription").value="";
