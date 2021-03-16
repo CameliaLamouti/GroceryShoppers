@@ -17,9 +17,9 @@ function edit_row(no)
  var ProductDescription_data=ProductDescription.innerHTML;
  
 
- ProductInventory.innerHTML="<input type='text' id='ProductInventory_text'"+no+"'value='"+ProductInventory_data+"'>";
- ProductPrice.innerHTML="<input type='text' id='ProductPrice_text'"+no+"'value='"+ProductPrice_data+"'>";
- ProductDescription.innerHTML="<input type='text' id='ProductDescription_text'"+no+"'value='"+ProductDescription_data+"'>";
+ ProductInventory.innerHTML="<input type='text' id='ProductInventory_text"+no+"' value='"+ProductInventory_data+"'>";
+ ProductPrice.innerHTML="<input type='text' id='ProductPrice_text"+no+"' value='"+ProductPrice_data+"'>";
+ ProductDescription.innerHTML="<input type='text' id='ProductDescription_text"+no+"' value='"+ProductDescription_data+"'>";
  
 
 }
