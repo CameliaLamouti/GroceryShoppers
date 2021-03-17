@@ -104,6 +104,13 @@ function createAccount(){
   var confirmpass = document.getElementById("confirmpass").value;
 if(document.getElementById("checkbox").checked){
   if (firstname!= "" && lastname!= "" && email!= "" && confirmemail!= "" && pass!= "" && confirmpass!= ""){
+   
+    function validateEmail(){
+      if(checkIfEmpty(email)) return;
+      if(!containsCharacters(email, 5)) return;
+      return true;
+  }
+   
     if (email==confirmemail){
       if (pass==confirmpass){
         alert("You Have Succesfully Created An Account!");
@@ -123,4 +130,37 @@ if(document.getElementById("checkbox").checked){
 else{
   alert("You Must Agree To The Terms And Conditions.")
 }
+}
+
+
+function containsCharacters(field, code){
+  let regEx;
+  switch(code){
+      case 1:
+          //letters
+          regEx = /(?=.*[a-zA-Z])/;
+          return matchWithRegEx(regEx, field, 'Must contain at least one letter');
+
+      case 2:
+          //letters and numbers
+          regEx = /(?=.*\d)(?=.*[a-zA-Z])/
+          return matchWithRegEx (regEx, field, 'Must contain at least one letter and one number');
+
+      case 3:
+          //one upper and lower case and number 
+          regEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/
+          return matchWithRegEx(regEx, field, 'Must contain at least one uppercase, one lowercase and one number');
+
+      case 4:
+          //upper lower special char and numb 
+          regEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/
+          return matchWithRegEx(regEx, field, 'Must contain at least one uppercase, one lowercase, one number and a special character');
+
+      case 5:
+          //Email pattern 
+          regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          return matchWithRegEx(regEx, field, 'Must be a valid email address');
+      default:
+          return false;
+  }
 }
