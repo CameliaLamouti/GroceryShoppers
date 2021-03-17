@@ -25,16 +25,15 @@
     
     <div class="form">
         
-        <form action="action_page.php" method="post">
-      
+        <form>
             <div>
               <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
+              <input type="text" placeholder="Enter Email" name="email" id="signemail" required>
           
               <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
+              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
           
-              <button type="submit">Login</button>
+              <button type="submit" onclick = "signIn()">Login</button>
               <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
               </label>

@@ -29,14 +29,14 @@
               <label for="last name"><b>Last Name</b></label>
               <input type="text" placeholder="Enter Last Name" name="last name" id="lastname"> 
               <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email"  id="email">              
+              <input type="text" placeholder="Enter Email" name="email"  id="email"  onfocusout="validateEmail()">              
               <label for="email"><b>Confirm Email</b></label>
               <input type="text" placeholder="Re-enter Email" name="confirm email" id="confirmemail">
               <label for="psw"><b>Password</b></label>
               <input type="password" placeholder="Enter Password" name="pass" id="pass">              
               <label for="psw"><b>Confirm Password</b></label>
               <input type="password" placeholder="Re-enter Password" name="confirmpass" id="confirmpass">
-              <button type="submit" onclick="createAccount()" id="createAccount_button">Create Account</button>
+              <button type="button" onclick="createAccount()" id="createAccount_button">Create Account</button>
               <label>
                 <input type="checkbox" name="remember" id="checkbox"> I agree to the terms and conditions.
               </label>

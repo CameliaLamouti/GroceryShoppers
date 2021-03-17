@@ -74,6 +74,14 @@ document.getElementsByClassName("show-reset")[0].addEventListener("click",functi
   document.getElementById("submit-btn").innerText = "Reset password";
 });
 
+function signIn(){
+  var email=document.getElementById("signemail").value;
+  var password=document.getElementById("psw").value;
+  if(email!="" && password!=""){
+    alert("You Have Been Succesfully Logged In.")
+  }
+}
+
 /*Password Reset*/
 function resetPassword(){
   var email = document.getElementById("email").value;
@@ -98,20 +106,13 @@ function resetPassword(){
 function createAccount(){
   var firstname = document.getElementById("firstname").value;
   var lastname = document.getElementById("lastname").value;
-  var email = document.getElementById("email").value;
+  var emailvar = document.getElementById("email").value;
   var confirmemail = document.getElementById("confirmemail").value;
   var pass = document.getElementById("pass").value;
   var confirmpass = document.getElementById("confirmpass").value;
 if(document.getElementById("checkbox").checked){
-  if (firstname!= "" && lastname!= "" && email!= "" && confirmemail!= "" && pass!= "" && confirmpass!= ""){
-   
-    function validateEmail(){
-      if(checkIfEmpty(email)) return;
-      if(!containsCharacters(email, 5)) return;
-      return true;
-  }
-   
-    if (email==confirmemail){
+  if (firstname!= "" && lastname!= "" && emailvar!= "" && confirmemail!= "" && pass!= "" && confirmpass!= ""){
+    if (emailvar==confirmemail){
       if (pass==confirmpass){
         alert("You Have Succesfully Created An Account!");
       }
@@ -130,6 +131,13 @@ if(document.getElementById("checkbox").checked){
 else{
   alert("You Must Agree To The Terms And Conditions.")
 }
+}
+
+function validateEmail(){
+  const email = document.getElementById("email");
+  if(!containsCharacters(email, 5)) {
+    alert("Please Enter A Valid Email");
+  }
 }
 
 
@@ -162,5 +170,13 @@ function containsCharacters(field, code){
           return matchWithRegEx(regEx, field, 'Must be a valid email address');
       default:
           return false;
+  }
+}
+
+function matchWithRegEx(regEx, field, message){
+  if(field.value.match(regEx)){
+      return true;
+  } else{
+      return false;
   }
 }
