@@ -75,7 +75,7 @@ document.getElementsByClassName("show-reset")[0].addEventListener("click",functi
 });
 
 function signIn(){
-  var email=document.getElementById("signemail").value;
+  var email=document.getElementById("email").value;
   var password=document.getElementById("psw").value;
   if(email!="" && password!=""){
     alert("You Have Been Succesfully Logged In.")
