@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="../javascript/script.js" defer></script>
+    <script src="../javascript/contactJS.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <style>
        h1.center{
@@ -63,17 +63,19 @@
         <label for="Grocery Shoppers in-store"> Grocery Shoppers in-store</label>
         <input type="checkbox" name="agree">
         <br/>
+        <label for="Order Number">Order Number</label>
+        <input type="text" placeholder="Ex: #12345AB" name="Order Number" id = "orderNumber" required>
         <label for="First Name">First Name</label>
-        <input type="text" placeholder="Enter First Name" name="First Name" required>
+        <input type="text" placeholder="Enter First Name" name="First Name" id = "firstName" required>
         <label for="Last Name">Last Name</label>
-        <input type="text" placeholder="Enter Last Name" name="Last Name" required>
+        <input type="text" placeholder="Enter Last Name" name="Last Name" id = "lastName" required>
         <label for="Email Address">Email Address</label>
-        <input type="text" placeholder="Enter Email Address" name="Email Addrsss" required>
+        <input type="text" placeholder="Enter Email Address" name="Email Addrsss" id = "emailAddress" required>
         <label for="Phone Number">Phone Number</label>
-        <input type="text" placeholder="+1 (514) xxx xxxx" name="Phone Number" required>
+        <input type="text" placeholder="+1 (514) xxx xxxx" name="Phone Number" id = "phoneNumber" required>
         <label for="comments">Comments</label><br/>
-        <textarea name="comments" rows="10" columns = "40"></textarea>
-        <button type="Send">Send</button>
+        <textarea name="comments" rows="10" columns = "40" name="comments" id = "comments"></textarea>
+        <button type="Send"  onclick="send()" id="send_button">Send</button>
     </form>
     </div>
     
