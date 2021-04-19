@@ -3,7 +3,7 @@ include "connection.php";
 $id=$_GET["id"];
 
 $firstName="";
-$lastName="";
+$lastName=""; 
 $email="";
 $password="";
 
