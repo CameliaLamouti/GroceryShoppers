@@ -21,7 +21,7 @@ while($row=mysqli_fetch_array($res))
 <html lang="en">
 
 <head>
-  <title>User List</title>
+  <title>Edit User</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -32,7 +32,7 @@ while($row=mysqli_fetch_array($res))
 <body>
     <div class="container">
     <div class="col-lg-4">
-    <h2>User</h2>
+    <h2>Edit User</h2>
     <form action="" name="form1" method="POST">
         <div class="form-group">
         <label for="firstName">First Name:</label>
@@ -57,14 +57,10 @@ while($row=mysqli_fetch_array($res))
 </body>
 
 <?php
-if(isset($_POST["Update"]))
+if(isset($_POST["update"]))
 {
-    mysqli_query($link,"update userlist set firstName='$_POST[firstName]', lastName='$_POST[lastName]', email='$_POST[email]', password='$_POST[password]')");
-    ?>
-    <script type="text/javascript">
-    window.location.href=userlist.php;
-    </script>
-    <?php
+    mysqli_query($link,"update userlist set firstName='$_POST[firstName]', lastName='$_POST[lastName]', email='$_POST[email]', password='$_POST[pwd]' where id=$id");
+    header("location: userlist.php");
 }
 ?>
 
