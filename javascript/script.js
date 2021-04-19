@@ -140,6 +140,13 @@ function validateEmail(){
   }
 }
 
+function validateOrderNum(){
+  const order = document.getElementById("OrderNumber");
+  if(!containsCharacters(order,2)){
+    alert("Invalid order number");
+  }
+}
+
 
 function containsCharacters(field, code){
   let regEx;
@@ -168,6 +175,7 @@ function containsCharacters(field, code){
           //Email pattern 
           regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
           return matchWithRegEx(regEx, field, 'Must be a valid email address');
+      
       default:
           return false;
   }

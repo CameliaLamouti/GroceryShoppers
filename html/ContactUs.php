@@ -53,29 +53,31 @@
     
 
     <div class="form">
-        <form action="phpScript.php" method="POST">
+        <form action="PHPScript.php" method="POST">
         <label for="website">Website</label>
-        <input type="checkbox" name="agree">        
+        <input type="radio" name="agree" value="Mobile Application">        
         <label for="mobile application"> Mobile Application</label>
-        <input type="checkbox" name="agree">
+        <input type="radio" name="agree" value="Grocery Shoppers Online">
         <label for="Grocery Shoppers Online"> Grocery Shoppers Online</label>
-        <input type="checkbox" name="agree">
+        <input type="radio" name="agree" value="Grocery Shoppers in-store">
         <label for="Grocery Shoppers in-store"> Grocery Shoppers in-store</label>
-        <input type="checkbox" name="agree">
+        <input type="radio" name="agree">
         <br/>
         <label for="Order Number">Order Number</label>
-        <input type="text" placeholder="Ex: #12345AB" name="Order Number" id = "orderNumber" required>
+        <input type="text" placeholder="Ex: #12345AB" name="OrderNumber" id = "OrderNumber" required onfocusout="validateOrderNum()">
+        <label for="Item Name">Item Name</label>
+        <input type="text" placeholder="Ex: Apple" name="ItemName" id="ItemName" required>
         <label for="First Name">First Name</label>
-        <input type="text" placeholder="Enter First Name" name="First Name" id = "firstName" required>
+        <input type="text" placeholder="Enter First Name" name="FirstName" id = "firstName" required>
         <label for="Last Name">Last Name</label>
-        <input type="text" placeholder="Enter Last Name" name="Last Name" id = "lastName" required>
+        <input type="text" placeholder="Enter Last Name" name="LastName" id = "lastName" required>
         <label for="Email Address">Email Address</label>
-        <input type="text" placeholder="Enter Email Address" name="Email Addrsss" id = "emailAddress" required>
+        <input type="text" placeholder="Enter Email Address" name="EmailAddress" id = "emailAddress" required >
         <label for="Phone Number">Phone Number</label>
-        <input type="text" placeholder="+1 (514) xxx xxxx" name="Phone Number" id = "phoneNumber" required>
-        <label for="comments">Comments</label><br/>
+        <input type="text" placeholder="+1 (514) xxx xxxx" name="PhoneNumber" id = "phoneNumber" required>
+        <label for="comments">Comments/Questions</label><br/>
         <textarea name="comments" rows="10" columns = "40" name="comments" id = "comments"></textarea>
-        <button type="Send"  onclick="send()" id="send_button">Send</button>
+        <button type="Send"  onclick="send()" id="send_button" name="submit" value="enter">Send</button>
         </form>
     </div>
     
