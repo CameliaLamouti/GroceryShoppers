@@ -44,7 +44,7 @@ include "../php/connection.php";
               </label>
                     
             <div style="background-color:#f1f1f1">
-              <span class="psw"><a href="PasswordReset.html">Forgot password?</a></span>     
+              <span class="psw"><a href="PasswordReset.php">Forgot password?</a></span>     
             
               <span class="signup">Don't have an account? <a href="Sign Up.php">Sign Up</a></span>
               
