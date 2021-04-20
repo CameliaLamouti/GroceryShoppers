@@ -67,11 +67,16 @@ if(isset($_POST["update"]))
     header("location: orderlist.php");
     $updatemsg = "This is a confirmation that your order has been updated to : ";
     $updatemsg2 = ". New price post tax is: ";
-    $orderSummary = $_POST[orderSummary];
-    $postTaxCost = $_POST[postTaxCost];
-    $email = $_POST[email];
+    $orderSummary = $_POST["orderSummary"];
+    $postTaxCost = $_POST["postTaxCost"];
+    $email = $_POST["email"];
     $msg = $updatemsg . $orderSummary . $updatemsg2 . $postTaxCost;
-    mail($email, "Order Update Confirmation", $msg);
+    $msg = wordwrap($msg,70);
+    if(mail($email, "Order Update Confirmation", $msg)){
+        echo "The email to ($email) was succesfully sent.";
+    } else{
+        echo "The email to ($email) was not sent."
+    }
 }
 ?>
 
