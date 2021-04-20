@@ -47,6 +47,10 @@ include "connection.php";
         <input type="text" class="form-control" id="Price" placeholder="Enter Price" name="Price">
         </div>
         <div class="form-group">
+        <label for="Sale">Sale Price</label>
+        <input type="text" class="form-control" id="Sale" placeholder="Enter Sale Price" name="Sale">
+        </div>
+        <div class="form-group">
         <label for="Description">Description</label>
         <input type="text" class="form-control" id="Description" placeholder="Enter Description" name="Description">
         </div>
@@ -64,6 +68,7 @@ include "connection.php";
         <th>Image</th>
         <th>Inventory</th>
         <th>Price</th>
+        <th>Sale Price</th>
         <th>Description</th>
         <th>Edit</th>
         <th>Delete</th>
@@ -77,9 +82,10 @@ include "connection.php";
                 echo "<tr>";
                 echo "<td>"; echo $row["id"]; echo "</td>";
                 echo "<td>"; echo $row["Product"]; echo "</td>";
-                echo "<td>"; ?> <img src="<?php echo $row["Image"];?>" height="100" width="100"><?php echo "</td>";
+                echo "<td>"; ?> <img src="<?php echo $row["Image"];?>" height="100" width="100"> <?php echo "</td>";
                 echo "<td>"; echo $row["Inventory"]; echo "</td>";
                 echo "<td>"; echo $row["Price"]; echo "</td>";
+                echo "<td>"; echo $row["Sale"]; echo "</td>";
                 echo "<td>"; echo $row["Description"]; echo "</td>";
                 echo "<td>"; ?> <a href="editProduct.php?id=<?php echo $row["id"]; ?> "><button type="button" class="btn btn-success">Edit</button></a> <?php echo "</td>";
                 echo "<td>"; ?> <a href="deleteProduct.php?id=<?php echo $row["id"]; ?> "><button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
@@ -97,11 +103,11 @@ if(isset($_POST["insert"]))
 {
     $tm=md5(time());
     $fnm=$_FILES["Image"]["name"];
-    $dst="../Images".$tm.$fnm;
-    $dst1="Images".$tm.$fnm;
+    $dst="../Images/".$tm.$fnm;
+    $dst1="Images/".$tm.$fnm;
     move_uploaded_file($_FILES["Image"]["tmp_name"],$dst);
 
-    mysqli_query($link,"insert into productlist values (NULL,'$_POST[Product]','$dst1','$_POST[Inventory]','$_POST[Price]', '$_POST[Description]')");
+    mysqli_query($link,"insert into productlist values (NULL,'$_POST[Product]','$dst1','$_POST[Inventory]','$_POST[Price]', '$_POST[Sale]', '$_POST[Description]')");
     ?>
     <script type="text/javascript">
     window.location.href=window.location.href;

@@ -94,7 +94,7 @@ include "connection.php";
 <?php
 if(isset($_POST["insert"]))
 {
-    mysqli_query($link,"insert into orderlist values (NULL,'$_POST[orderNb]','$_POST[preTaxCost]','$_POST[postTaxCost]','$_POST[orderSummary]')");
+    mysqli_query($link,"insert into orderlist values (NULL, '$_POST[email]', '$_POST[orderNb]','$_POST[preTaxCost]','$_POST[postTaxCost]','$_POST[orderSummary]')");
     ?>
     <script type="text/javascript">
     window.location.href=window.location.href;

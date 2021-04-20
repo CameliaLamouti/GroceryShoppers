@@ -2,6 +2,7 @@
 include "connection.php";
 $id=$_GET["id"];
 
+$email="";
 $orderNb="";
 $preTaxCost="";
 $postTaxCost="";
@@ -10,6 +11,7 @@ $orderSummary="";
 $res=mysqli_query($link, "select * from orderlist where id=$id");
 while($row=mysqli_fetch_array($res))
 {
+    $email=$row["email"];
     $orderNb=$row["orderNb"];
     $preTaxCost=$row["preTaxCost"];
     $postTaxCost=$row["postTaxCost"];
@@ -64,18 +66,18 @@ while($row=mysqli_fetch_array($res))
 if(isset($_POST["update"]))
 {
     mysqli_query($link,"update orderlist set email='$_POST[email]',orderNb='$_POST[orderNb]', preTaxCost='$_POST[preTaxCost]', postTaxCost='$_POST[postTaxCost]', orderSummary='$_POST[orderSummary]' where id=$id");
-    header("location: orderlist.php");
+
     $updatemsg = "This is a confirmation that your order has been updated to : ";
     $updatemsg2 = ". New price post tax is: ";
     $orderSummary = $_POST["orderSummary"];
     $postTaxCost = $_POST["postTaxCost"];
     $email = $_POST["email"];
-    $msg = $updatemsg . $orderSummary . $updatemsg2 . $postTaxCost;
+    $msg = '$updatemsg . $orderSummary . $updatemsg2 . $postTaxCost';
     $msg = wordwrap($msg,70);
     if(mail($email, "Order Update Confirmation", $msg)){
         echo "The email to ($email) was succesfully sent.";
     } else{
-        echo "The email to ($email) was not sent."
+        echo "The email to ($email) was not sent.";
     }
 }
 ?>

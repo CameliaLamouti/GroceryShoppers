@@ -1,5 +1,25 @@
 <?php
 include "connection.php";
+$id=$_GET["id"];
+
+$Product="";
+$Image="";
+$Inventory="";
+$Price="";
+$Sale="";
+$Description="";
+
+$res=mysqli_query($link, "select * from productlist where id=$id");
+while($row=mysqli_fetch_array($res))
+{
+    $Product=$row["Product"];
+    $Image=$row["Image"];
+    $Inventory=$row["Inventory"];
+    $Price=$row["Price"];
+    $Sale=$row["Sale"];
+    $Description=$row["Description"];
+}
+
 ?>
 
 <html lang="en">
@@ -30,41 +50,56 @@ include "connection.php";
     <div class="col-lg-4">
     <h2>Products</h2>
     <form action="" name="form1" method="POST" enctype="multipart/form-data">
+        
+        <img src="<?php echo $Image; ?>" height="100" width="100">
+        
         <div class="form-group">
         <label for="Product">Product:</label>
-        <input type="text" class="form-control" id="Product" placeholder="Enter Product" name="Product">
+        <input type="text" class="form-control" id="Product" placeholder="Enter Product" name="Product" value="<?php echo $Product; ?>">
         </div>
         <div class="form-group">
         <label for="Image">Image:</label>
-        <input type="file" class="form-control"  name="Image">
+        <input type="file" class="form-control" name="Image">
         </div>
         <div class="form-group">
         <label for="Inventory">Inventory:</label>
-        <input type="text" class="form-control" id="Inventory" placeholder="Enter Inventory" name="Inventory">
+        <input type="text" class="form-control" id="Inventory" placeholder="Enter Inventory" name="Inventory" value="<?php echo $Inventory; ?>">
         </div>
         <div class="form-group">
         <label for="Price">Price</label>
-        <input type="text" class="form-control" id="Price" placeholder="Enter Price" name="Price">
+        <input type="text" class="form-control" id="Price" placeholder="Enter Price" name="Price" value="<?php echo $Price; ?>">
+        </div>
+        <div class="form-group">
+        <label for="Sale">Sale Price:</label>
+        <input type="text" class="form-control" id="Sale" placeholder="Enter Sale Price" name="Sale" value="<?php echo $Sale; ?>">
         </div>
         <div class="form-group">
         <label for="Description">Description</label>
-        <input type="text" class="form-control" id="Description" placeholder="Enter Description" name="Description">
+        <input type="text" class="form-control" id="Description" placeholder="Enter Description" name="Description" value="<?php echo $Description; ?>">
         </div>
-        <button type="submit" name="insert" class="btn btn-default">Insert</button>
+        <button type="submit" name="update" class="btn btn-default">Update</button>
     </form>
     </div>
     </div>
 </body>
 
 <?php
-if(isset($_POST["insert"]))
+if(isset($_POST["update"]))
 {
-    mysqli_query($link,"insert into productlist values (NULL,'$_POST[Product]','$_POST[Image]','$_POST[Inventory]','$_POST[Price]', '$_POST[Description]')");
-    ?>
-    <script type="text/javascript">
-    window.location.href=window.location.href;
-    </script>
-    <?php
+    $tm=md5(time());
+    $fnm=$_FILES["Image"]["name"];
+    if($fnm==""){
+        mysqli_query($link,"update productlist set Product='$_POST[Product]', Inventory='$_POST[Inventory]', Price='$_POST[Price]', Description='$_POST[Description]' where id=$id");
+    }
+    else{
+        $dst="../Images/".$tm.$fnm;
+        $dst1="Images/".$tm.$fnm;
+        move_uploaded_file($_FILES["Image"]["tmp_name"],$dst);
+    
+        mysqli_query($link,"update productlist set Product='$_POST[Product]', Image='$dst1' ,Inventory='$_POST[Inventory]', Price='$_POST[Price]', Description='$_POST[Description]' where id=$id");
+    }
+
+    header("location: productlist.php");
 }
 ?>
 
