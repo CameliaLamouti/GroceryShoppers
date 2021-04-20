@@ -35,10 +35,6 @@ include "connection.php";
         <input type="text" class="form-control" id="Product" placeholder="Enter Product" name="Product">
         </div>
         <div class="form-group">
-        <label for="Image">Image:</label>
-        <input type="file" class="form-control" name="f1">
-        </div>
-        <div class="form-group">
         <label for="Inventory">Inventory:</label>
         <input type="text" class="form-control" id="Inventory" placeholder="Enter Inventory" name="Inventory">
         </div>
@@ -65,7 +61,6 @@ include "connection.php";
       <tr>
         <th>#</th>
         <th>Product</th>
-        <th>Image</th>
         <th>Inventory</th>
         <th>Price</th>
         <th>Sale Price</th>
@@ -82,7 +77,6 @@ include "connection.php";
                 echo "<tr>";
                 echo "<td>"; echo $row["id"]; echo "</td>";
                 echo "<td>"; echo $row["Product"]; echo "</td>";
-                echo "<td>"; ?> <img src="<?php echo $row["Image"];?>" height="100" width="100"> <?php echo "</td>";
                 echo "<td>"; echo $row["Inventory"]; echo "</td>";
                 echo "<td>"; echo $row["Price"]; echo "</td>";
                 echo "<td>"; echo $row["Sale"]; echo "</td>";

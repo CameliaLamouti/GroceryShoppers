@@ -51,8 +51,6 @@ while($row=mysqli_fetch_array($res))
     <h2>Products</h2>
     <form action="" name="form1" method="POST" enctype="multipart/form-data">
         
-        <img src="<?php echo $Image; ?>" height="100px" width="100px">
-        
         <div class="form-group">
         <label for="Product">Product:</label>
         <input type="text" class="form-control" id="Product" placeholder="Enter Product" name="Product" value="<?php echo $Product; ?>">
