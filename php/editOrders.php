@@ -58,6 +58,8 @@ while($row=mysqli_fetch_array($res))
         </div>
         <button type="submit" name="update" class="btn btn-default">Update</button>
     </form>
+</br>
+<a href="orderlist.php">All orders</a>
     </div>
     </div>
 </body>
@@ -79,6 +81,7 @@ if(isset($_POST["update"]))
     } else{
         echo "The email to ($email) was not sent.";
     }
+
 }
 ?>
 

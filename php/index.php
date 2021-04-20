@@ -27,7 +27,7 @@
          </br> To view and edit an order, please click Order list.
         </br> 
         </p>
-        <p ><a href="../html/index.html">main page</a></p>
+        <p ><a href="../html/index.php">main page</a></p>
         </div>
     </div>
       

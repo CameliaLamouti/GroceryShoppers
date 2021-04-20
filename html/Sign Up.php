@@ -71,6 +71,16 @@ include "../php/connection.php";
 </body>
 
 <?php
+if(isset($_POST['email']) && isset ($_POST['password'])){
+  $email=$_POST['email'];
+  $password=$_POST['password'];
+
+  $query = mysqli_query("SELECT * FROM userlist WHERE email='$email");
+  if(mysql_num_rows($query)>0){
+    echo 'Email is already being used';
+  }
+}
+
 if(isset($_POST["signUp"]))
 {
   mysqli_query($link,"insert into userlist values (NULL,'$_POST[firstName]','$_POST[lastName]','$_POST[email]','$_POST[pwd]')");
