@@ -54,24 +54,24 @@
                     <div class="row">
                         <div class="col-md-4">
                             <h3>Milk</h3>
-                            <a href="Dairy and Eggs/PP_Milk.html"> <img src =../../Images/milk.jpg> </a>
+                            <a href="Dairy and Eggs/PP_Milk.php"> <img src =../../Images/milk.jpg> </a>
                             $3.61/liter
                         </br>
-                            <a href="Dairy and Eggs/PP_Milk.html"> More Description on Milk</a>
+                            <a href="Dairy and Eggs/PP_Milk.php"> More Description on Milk</a>
                         </div>
                         <div class="col-md-4">
                             <h3>Cheese</h3>
-                            <a href="Dairy and Eggs/PP_Cheese.html"><img src="../../Images/cheese.jpg"></a>
+                            <a href="Dairy and Eggs/PP_Cheese.php"><img src="../../Images/cheese.jpg"></a>
                             $6.00/lb
                         </br>
-                            <a href="Dairy and Eggs/PP_Cheese.html"> More Description on Cheese</a>
+                            <a href="Dairy and Eggs/PP_Cheese.php"> More Description on Cheese</a>
                         </div>
                         <div class="col-md-4">
                             <h3>Yogurt</h3>
-                            <a href="Dairy and Eggs/PP_Yogurt.html"><img src="../../Images/yogurt.jpg"></a>
+                            <a href="Dairy and Eggs/PP_Yogurt.php"><img src="../../Images/yogurt.jpg"></a>
                             $4.00/pack
                         </br>
-                        <a href="Dairy and Eggs/PP_Yogurt.html"> More Description on Yogurt</a>
+                            <a href="Dairy and Eggs/PP_Yogurt.php"> More Description on Yogurt</a>
                         </div>
                     </div>
                 </div>

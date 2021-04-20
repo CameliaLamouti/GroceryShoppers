@@ -15,7 +15,7 @@
                 text-align: center;
 
             }
-            h3{color:crimson;
+            h3{color: crimson;
                 
             }
             .center{
@@ -46,40 +46,39 @@
         <main>
         <p>
             <div class="WordsBanner1">
-                <h5>Fruits & Vegetables</h5>
+                <h5>Beverages</h5>
                 </div>
             <section class="Aisles">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
-                            <h3>Apples</h3>
-                            <a href="Fruits and Vegetables/PP_Apples.html"> <img src =../../Images/apples.jpg> </a>
-                            $0.79/lb 
+                            <h3>Coke</h3>
+                            <a href="Beverages/PP_Coke.php"> <img src =../../Images/coke.jpg> </a>
+                            $4.00/pack
                         </br>
-                            <a href="Fruits and Vegetables/PP_Apples.html"> More Description on Apples</a>
+                            <a href="Beverages/PP_Coke.php"> More Description on Coke</a>
                         </div>
                         <div class="col-md-4">
-                            <h3>Bananas</h3>
-                            <a href="Fruits and Vegetables/PP_Bananas.html"><img src="../../Images/bananas.jpg"></a>
-                            Bananas are on sale! Only $0.79/lb
+                            <h3>Nestea</h3>
+                            <a href="Beverages/PP_Nestea.php"><img src="../../Images/nestea.jpg"></a>
+                            $2.99/pack
                         </br>
-                            <a href="Fruits and Vegetables/PP_Bananas.html"> More Description on Bananas</a>
+                            <a href="Beverages/PP_Nestea.php"> More Description on Nestea</a>
                         </div>
                         <div class="col-md-4">
-                            <h3>Broccoli</h3>
-                            <a href="Fruits and Vegetables/PP_Broccoli.html"><img src="../../Images/broccoli.jpg"></a>
-                            $1.58/lb
+                            <h3>Crush</h3>
+                            <a href="Beverages/PP_Crush.php"><img src="../../Images/crush.jpeg"></a>
+                            $1.49/can
                         </br>
-                        <a href="Fruits and Vegetables/PP_Broccoli.html"> More Description on Broccoli</a>
+                            <a href="Beverages/PP_Crush.php"> More Description on Crush</a>
                         </div>
                     </div>
                 </div>
             </section>
-        
         </p>
-        
     <br/>
 </main>
+
     <!--Footer-->
     <div id="footer" class="footer"></div>
     <script>

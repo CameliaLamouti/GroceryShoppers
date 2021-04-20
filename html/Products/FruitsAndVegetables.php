@@ -46,36 +46,38 @@
         <main>
         <p>
             <div class="WordsBanner1">
-                <h5>Fish & Seafood</h5>
+                <h5>Fruits & Vegetables</h5>
                 </div>
             <section class="Aisles">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
-                            <h3>Salmon</h3>
-                            <a href="Fish and Seafood/PP_Salmon.html"> <img src =../../Images/salmon.jpg> </a>
-                            $15.00/lb 
+                            <h3>Apples</h3>
+                            <a href="Fruits and Vegetables/PP_Apples.php"> <img src =../../Images/apples.jpg> </a>
+                            $0.79/lb 
                         </br>
-                            <a href="Fish and Seafood/PP_Salmon.html"> More Description on Salmon</a>
+                            <a href="Fruits and Vegetables/PP_Apples.php"> More Description on Apples</a>
                         </div>
                         <div class="col-md-4">
-                            <h3>Tuna</h3>
-                            <a href="Fish and Seafood/PP_Tuna.html"><img src="../../Images/tuna.jpg"></a>
-                            $3.80/lb
+                            <h3>Bananas</h3>
+                            <a href="Fruits and Vegetables/PP_Bananas.php"><img src="../../Images/bananas.jpg"></a>
+                            Bananas are on sale! Only $0.79/lb
                         </br>
-                            <a href="Fish and Seafood/PP_Tuna.html"> More Description on Tuna</a>
+                            <a href="Fruits and Vegetables/PP_Bananas.php"> More Description on Bananas</a>
                         </div>
                         <div class="col-md-4">
-                            <h3>Shrimp</h3>
-                            <a href="Fish and Seafood/PP_Shrimp.html"><img src="../../Images/shrimp.jpg"></a>
-                            $13.99/lb
+                            <h3>Broccoli</h3>
+                            <a href="Fruits and Vegetables/PP_Broccoli.php"><img src="../../Images/broccoli.jpg"></a>
+                            $1.58/lb
                         </br>
-                        <a href="Fish and Seafood/PP_Shrimp.html"> More Description on Shrimp</a>
+                            <a href="Fruits and Vegetables/PP_Broccoli.php"> More Description on Broccoli</a>
                         </div>
                     </div>
                 </div>
             </section>
-    </p>
+        
+        </p>
+        
     <br/>
 </main>
     <!--Footer-->
@@ -85,6 +87,7 @@
           $("#footer").load("../footer.html");
         });
         </script>
+
 
 
     </body>

@@ -15,7 +15,7 @@
                 text-align: center;
 
             }
-            h3{color: crimson;
+            h3{color:crimson;
                 
             }
             .center{
@@ -46,39 +46,38 @@
         <main>
         <p>
             <div class="WordsBanner1">
-                <h5>Beverages</h5>
+                <h5>Fish & Seafood</h5>
                 </div>
             <section class="Aisles">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
-                            <h3>Coke</h3>
-                            <a href="Beverages/PP_Coke.html"> <img src =../../Images/coke.jpg> </a>
-                            $4.00/pack
+                            <h3>Salmon</h3>
+                            <a href="Fish and Seafood/PP_Salmon.php"> <img src =../../Images/salmon.jpg> </a>
+                            $15.00/lb 
                         </br>
-                            <a href="Beverages/PP_Coke.html"> More Description on Coke</a>
+                            <a href="Fish and Seafood/PP_Salmon.php"> More Description on Salmon</a>
                         </div>
                         <div class="col-md-4">
-                            <h3>Nestea</h3>
-                            <a href="Beverages/PP_Nestea.html"><img src="../../Images/nestea.jpg"></a>
-                            $2.99/pack
+                            <h3>Tuna</h3>
+                            <a href="Fish and Seafood/PP_Tuna.php"><img src="../../Images/tuna.jpg"></a>
+                            $3.80/lb
                         </br>
-                            <a href="Beverages/PP_Nestea.html"> More Description on Nestea</a>
+                            <a href="Fish and Seafood/PP_Tuna.php"> More Description on Tuna</a>
                         </div>
                         <div class="col-md-4">
-                            <h3>Crush</h3>
-                            <a href="Beverages/PP_Crush.html"><img src="../../Images/crush.jpeg"></a>
-                            $1.49/can
+                            <h3>Shrimp</h3>
+                            <a href="Fish and Seafood/PP_Shrimp.php"><img src="../../Images/shrimp.jpg"></a>
+                            $13.99/lb
                         </br>
-                        <a href="Beverages/PP_Crush.html"> More Description on Crush</a>
+                            <a href="Fish and Seafood/PP_Shrimp.php"> More Description on Shrimp</a>
                         </div>
                     </div>
                 </div>
             </section>
-        </p>
+    </p>
     <br/>
 </main>
-
     <!--Footer-->
     <div id="footer" class="footer"></div>
     <script>
@@ -86,7 +85,6 @@
           $("#footer").load("../footer.html");
         });
         </script>
-
 
 
     </body>

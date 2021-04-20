@@ -71,7 +71,7 @@ include "../php/connection.php";
     {
       function checkifexist($email){
         
-        $result = mysqli_query($link,"SELECT email FROM userlist where email ='".$email."' ");
+        $result = mysqli_query($link,"SELECT column FROM userlist where column ='".$email."' ");
         $num_rows = mysqli_num_rows($result);
         
         if($num_rows > 0)
@@ -83,11 +83,11 @@ include "../php/connection.php";
         return false;
         }
         } 
-        $input = 'email';
-        if(checkifexist($email))
+        
+        $input = $email;
+        if(checkifexist($input)=='true')
         {
-        echo "<style color:green> You have succesfully signed in !</style> ";
-        header("location: ../html/index.html");
+        echo "You have succesfully signed in !";
         }
 
     }

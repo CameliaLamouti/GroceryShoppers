@@ -53,24 +53,24 @@
                     <div class="row">
                         <div class="col-md-4">
                             <h3>Bread</h3>
-                            <a href="Bread and Bakery/PP_Bread.html"> <img src =../../Images/Bread.jpg> </a>
+                            <a href="Bread and Bakery/PP_Bread.php"> <img src =../../Images/Bread.jpg> </a>
                             $2.00/pack
                         </br>
-                            <a href="Bread and Bakery/PP_Bread.html"> More Description on Bread</a>
+                            <a href="Bread and Bakery/PP_Bread.php"> More Description on Bread</a>
                         </div>
                         <div class="col-md-4">
                             <h3>Burger Buns</h3>
-                            <a href="Bread and Bakery/PP_BurgerBuns.html"><img src="../../Images/BurgerBuns.jpg"></a>
+                            <a href="Bread and Bakery/PP_BurgerBuns.php"><img src="../../Images/BurgerBuns.jpg"></a>
                             $4.99/pack
                         </br>
-                            <a href="Bread and Bakery/PP_BurgerBuns.html"> More Description on Burger Buns</a>
+                            <a href="Bread and Bakery/PP_BurgerBuns.php"> More Description on Burger Buns</a>
                         </div>
                         <div class="col-md-4">
                             <h3>Baguettes</h3>
-                            <a href="Bread and Bakery/PP_Baguettes.html"><img src="../../Images/baguette.jpeg"></a>
+                            <a href="Bread and Bakery/PP_Baguettes.php"><img src="../../Images/baguette.jpeg"></a>
                             Baguettes are on sale! Only $3.00/pack
                         </br>
-                        <a href="Bread and Bakery/PP_Baguettes.html"> More Description on Baguettes</a>
+                            <a href="Bread and Bakery/PP_Baguettes.php"> More Description on Baguettes</a>
                         </div>
                     </div>
                 </div>
