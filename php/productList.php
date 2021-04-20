@@ -36,7 +36,7 @@ include "connection.php";
         </div>
         <div class="form-group">
         <label for="Image">Image:</label>
-        <input type="file" class="form-control" name="Image">
+        <input type="file" class="form-control" name="f1">
         </div>
         <div class="form-group">
         <label for="Inventory">Inventory:</label>
@@ -102,10 +102,10 @@ include "connection.php";
 if(isset($_POST["insert"]))
 {
     $tm=md5(time());
-    $fnm=$_FILES["Image"]["name"];
+    $fnm=$_FILES["f1"]["name"];
     $dst="../Images/".$tm.$fnm;
     $dst1="Images/".$tm.$fnm;
-    move_uploaded_file($_FILES["Image"]["tmp_name"],$dst);
+    move_uploaded_file($_FILES["f1"]["tmp_name"],$dst);
 
     mysqli_query($link,"insert into productlist values (NULL,'$_POST[Product]','$dst1','$_POST[Inventory]','$_POST[Price]', '$_POST[Sale]', '$_POST[Description]')");
     ?>

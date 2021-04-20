@@ -51,7 +51,7 @@ while($row=mysqli_fetch_array($res))
     <h2>Products</h2>
     <form action="" name="form1" method="POST" enctype="multipart/form-data">
         
-        <img src="<?php echo $Image; ?>" height="100" width="100">
+        <img src="<?php echo $Image; ?>" height="100px" width="100px">
         
         <div class="form-group">
         <label for="Product">Product:</label>
@@ -59,7 +59,7 @@ while($row=mysqli_fetch_array($res))
         </div>
         <div class="form-group">
         <label for="Image">Image:</label>
-        <input type="file" class="form-control" name="Image">
+        <input type="file" class="form-control" name="f1">
         </div>
         <div class="form-group">
         <label for="Inventory">Inventory:</label>
