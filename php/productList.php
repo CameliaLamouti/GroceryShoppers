@@ -75,14 +75,14 @@ include "connection.php";
             while($row=mysqli_fetch_array($res))
             {
                 echo "<tr>";
-                echo "<td>"; echo $row["ID"]; echo "</td>";
+                echo "<td>"; echo $row["id"]; echo "</td>";
                 echo "<td>"; echo $row["Product"]; echo "</td>";
                 echo "<td>"; ?> <img src="<?php echo $row["Image"];?>" height="100" width="100"><?php echo "</td>";
                 echo "<td>"; echo $row["Inventory"]; echo "</td>";
                 echo "<td>"; echo $row["Price"]; echo "</td>";
                 echo "<td>"; echo $row["Description"]; echo "</td>";
                 echo "<td>"; ?> <a href="editProduct.php?id=<?php echo $row["id"]; ?> "><button type="button" class="btn btn-success">Edit</button></a> <?php echo "</td>";
-                echo "<td>"; ?> <a href="deleteUser.php?id=<?php echo $row["id"]; ?> "><button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
+                echo "<td>"; ?> <a href="deleteProduct.php?id=<?php echo $row["id"]; ?> "><button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
 
             }
         ?>

@@ -21,7 +21,7 @@ while($row=mysqli_fetch_array($res))
 <html lang="en">
 
 <head>
-  <title>Edit User</title>
+  <title>Edit Order</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -32,25 +32,29 @@ while($row=mysqli_fetch_array($res))
 <body>
     <div class="container">
     <div class="col-lg-4">
-    <h2>Order</h2>
-    <form action="" name="form2" method="POST">
-        <div class="form-group">
-        <label for="orderNb">OrderNb:</label>
-        <input type="text" class="form-control" id="orderNb" placeholder="Enter order Nb" name="orderNb">
+    <h2>Edit Order</h2>
+    <form action="" name="form1" method="POST">
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" id="email" placeholder="Enter orderNb" name="email" value="<?php echo $email; ?>">
         </div>
         <div class="form-group">
-        <label for="preTaxCost">Pre-tax cost:</label>
-        <input type="text" class="form-control" id="preTaxCost" placeholder="Enter pre-tax cost" name="preTaxCost">
+        <label for="orderNb">Order Number:</label>
+        <input type="text" class="form-control" id="orderNb" placeholder="Enter orderNb" name="orderNb" value="<?php echo $orderNb; ?>">
         </div>
         <div class="form-group">
-        <label for="postTaxCost">Email:</label>
-        <input type="text" class="form-control" id="postTaxCost" placeholder="Enter postTaxCost" name="postTaxCost">
+        <label for="preTaxCost">preTaxCost:</label>
+        <input type="text" class="form-control" id="preTaxCost" placeholder="Enter preTaxCost" name="preTaxCost" value="<?php echo $preTaxCost; ?>">
         </div>
         <div class="form-group">
-        <label for="orderSummary">Order Summary:</label>
-        <input type="test" class="form-control" id="orderSummary" placeholder="Enter order summary" name="orderSummary">
+        <label for="postTaxCost">postTaxCost:</label>
+        <input type="text" class="form-control" id="postTaxCost" placeholder="Enter postTaxCost" name="postTaxCost" value="<?php echo $postTaxCost; ?>">
         </div>
-        <button type="submit" name="insert" class="btn btn-default">Insert</button>
+        <div class="form-group">
+        <label for="orderSummary">orderSummary:</label>
+        <input type="text" class="form-control" id="orderSummary" placeholder="Enter orderSummary" name="orderSummary" value="<?php echo $orderSummary; ?>">
+        </div>
+        <button type="submit" name="update" class="btn btn-default">Update</button>
     </form>
     </div>
     </div>
@@ -59,8 +63,20 @@ while($row=mysqli_fetch_array($res))
 <?php
 if(isset($_POST["update"]))
 {
-    mysqli_query($link,"update orderlist set orderNb='$_POST[orderNb]', preTaxCost='$_POST[preTaxCost]', postTaxCost='$_POST[postTaxCost]', orderSummary='$_POST[orderSummary]' where id=$id");
+    mysqli_query($link,"update orderlist set email='$_POST[email]',orderNb='$_POST[orderNb]', preTaxCost='$_POST[preTaxCost]', postTaxCost='$_POST[postTaxCost]', orderSummary='$_POST[orderSummary]' where id=$id");
     header("location: orderlist.php");
+    $updatemsg = "This is a confirmation that your order has been updated to : ";
+    $updatemsg2 = ". New price post tax is: ";
+    $orderSummary = $_POST["orderSummary"];
+    $postTaxCost = $_POST["postTaxCost"];
+    $email = $_POST["email"];
+    $msg = $updatemsg . $orderSummary . $updatemsg2 . $postTaxCost;
+    $msg = wordwrap($msg,70);
+    if(mail($email, "Order Update Confirmation", $msg)){
+        echo "The email to ($email) was succesfully sent.";
+    } else{
+        echo "The email to ($email) was not sent."
+    }
 }
 ?>
 
