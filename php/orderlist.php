@@ -11,10 +11,22 @@ include "connection.php";
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
+
+  <link rel="stylesheet" href="../css/style2.css">
+  <script src="https://kit.fontawesome.com/d27ba70d65.js" crossorigin="anonymous"></script>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+
+  <div id="sidebar"></div>
+  <script>
+  $(function(){
+      $("#sidebar").load("sidenavphp.html");
+  });
+  </script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="content">
     <div class="col-lg-4">
     <h2>Order</h2>
     <form action="" name="form2" method="POST">
@@ -36,7 +48,6 @@ include "connection.php";
         </div>
         <button type="submit" name="insert" class="btn btn-default">Insert</button>
     </form>
-    </div>
     </div>
 
     <div class="col-lg-12">
@@ -70,6 +81,7 @@ include "connection.php";
         ?>
     </tbody>
     </table>
+    </div>
     </div>
 </body>
 
