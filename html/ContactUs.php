@@ -20,7 +20,7 @@
        }
        h5.blah{
            margin: 20px;
-           padding: 10px;
+           padding: 20px;
            text-align: center;
            background-color: blue;
            color: white;
@@ -28,6 +28,7 @@
        p{
             margin: 20px;
            text-align: center;
+           padding: 10px;
            font: caption;
            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
            font-size: large;
@@ -54,15 +55,14 @@
 
     <div class="form">
         <form action="PHPScript.php" method="POST">
-        <label for="website">Website</label>
+        <input type="radio" name="agree" value="Website">
+        <label for="website">Website</label></br>
         <input type="radio" name="agree" value="Mobile Application">        
-        <label for="mobile application"> Mobile Application</label>
+        <label for="mobile application"> Mobile Application</label></br>
         <input type="radio" name="agree" value="Grocery Shoppers Online">
-        <label for="Grocery Shoppers Online"> Grocery Shoppers Online</label>
+        <label for="Grocery Shoppers Online"> Grocery Shoppers Online</label></br>
         <input type="radio" name="agree" value="Grocery Shoppers in-store">
-        <label for="Grocery Shoppers in-store"> Grocery Shoppers in-store</label>
-        <input type="radio" name="agree">
-        <br/>
+        <label for="Grocery Shoppers in-store"> Grocery Shoppers in-store</label></br>
         <label for="Order Number">Order Number</label>
         <input type="text" placeholder="Ex: #12345AB" name="OrderNumber" id = "OrderNumber" required onfocusout="validateOrderNum()">
         <label for="Item Name">Item Name</label>
@@ -76,7 +76,7 @@
         <label for="Phone Number">Phone Number</label>
         <input type="text" placeholder="+1 (514) xxx xxxx" name="PhoneNumber" id = "phoneNumber" required>
         <label for="comments">Comments/Questions</label><br/>
-        <textarea name="comments" rows="10" columns = "40" name="comments" id = "comments"></textarea>
+        <textarea name="comments" rows="10" cols = "69" name="comments" id = "comments"></textarea>
         <button type="Send"  onclick="send()" id="send_button" name="submit" value="enter">Send</button>
         </form>
     </div>
