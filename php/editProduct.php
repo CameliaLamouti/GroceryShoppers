@@ -36,7 +36,7 @@ include "connection.php";
         </div>
         <div class="form-group">
         <label for="Image">Image:</label>
-        <input type="file" class="form-control" name="Image">
+        <input type="file" class="form-control"  name="Image">
         </div>
         <div class="form-group">
         <label for="Inventory">Inventory:</label>
