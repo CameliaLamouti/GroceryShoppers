@@ -109,7 +109,7 @@
           <td class="cart-total-price">$0.00</td>
       </tr>
       <tr>
-          <td><a href="../../Products.html">Continue shopping</a></td>
+          <td><a href="../../Products.php">Continue shopping</a></td>
       </tr>
   </table>
 </div>
