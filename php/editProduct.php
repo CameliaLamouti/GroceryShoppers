@@ -53,55 +53,13 @@ include "connection.php";
         <button type="submit" name="insert" class="btn btn-default">Insert</button>
     </form>
     </div>
-    
-
-    <div class="col-lg-12">
-    <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Product</th>
-        <th>Image</th>
-        <th>Inventory</th>
-        <th>Price</th>
-        <th>Description</th>
-        <th>Edit</th>
-        <th>Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-        <?php
-            $res=mysqli_query($link,"select * from productlist");
-            while($row=mysqli_fetch_array($res))
-            {
-                echo "<tr>";
-                echo "<td>"; echo $row["ID"]; echo "</td>";
-                echo "<td>"; echo $row["Product"]; echo "</td>";
-                echo "<td>"; ?> <img src="<?php echo $row["Image"];?>" height="100" width="100"><?php echo "</td>";
-                echo "<td>"; echo $row["Inventory"]; echo "</td>";
-                echo "<td>"; echo $row["Price"]; echo "</td>";
-                echo "<td>"; echo $row["Description"]; echo "</td>";
-                echo "<td>"; ?> <a href="editProduct.php?id=<?php echo $row["id"]; ?> "><button type="button" class="btn btn-success">Edit</button></a> <?php echo "</td>";
-                echo "<td>"; ?> <a href="deleteUser.php?id=<?php echo $row["id"]; ?> "><button type="button" class="btn btn-danger">Delete</button></a> <?php echo "</td>";
-
-            }
-        ?>
-    </tbody>
-  </table>
-    </div>
     </div>
 </body>
 
 <?php
 if(isset($_POST["insert"]))
 {
-    $tm=md5(time());
-    $fnm=$_FILES["Image"]["name"];
-    $dst="../Images".$tm.$fnm;
-    $dst1="Images".$tm.$fnm;
-    move_uploaded_file($_FILES["Image"]["tmp_name"],$dst);
-
-    mysqli_query($link,"insert into productlist values (NULL,'$_POST[Product]','$dst1','$_POST[Inventory]','$_POST[Price]', '$_POST[Description]')");
+    mysqli_query($link,"insert into productlist values (NULL,'$_POST[Product]','$_POST[Image]','$_POST[Inventory]','$_POST[Price]', '$_POST[Description]')");
     ?>
     <script type="text/javascript">
     window.location.href=window.location.href;

@@ -7,7 +7,7 @@ $preTaxCost="";
 $postTaxCost="";
 $orderSummary="";
 
-$res=mysqli_query($link, "select * from orders where id=$id");
+$res=mysqli_query($link, "select * from orderlist where id=$id");
 while($row=mysqli_fetch_array($res))
 {
     $orderNb=$row["orderNb"];
@@ -59,7 +59,7 @@ while($row=mysqli_fetch_array($res))
 <?php
 if(isset($_POST["update"]))
 {
-    mysqli_query($link,"update orders set orderNb='$_POST[orderNb]', preTaxCost='$_POST[preTaxCost]', postTaxCost='$_POST[postTaxCost]', orderSummart='$_POST[orderSummary]' where id=$id");
+    mysqli_query($link,"update orderlist set orderNb='$_POST[orderNb]', preTaxCost='$_POST[preTaxCost]', postTaxCost='$_POST[postTaxCost]', orderSummary='$_POST[orderSummary]' where id=$id");
     header("location: orderlist.php");
 }
 ?>

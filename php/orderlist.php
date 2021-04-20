@@ -54,7 +54,7 @@ include "connection.php";
     </thead>
     <tbody>
         <?php
-            $res=mysqli_query($link,"select * from orders");
+            $res=mysqli_query($link,"select * from orderlist");
             while($row=mysqli_fetch_array($res))
             {
                 echo "<tr>";
@@ -76,7 +76,7 @@ include "connection.php";
 <?php
 if(isset($_POST["insert"]))
 {
-    mysqli_query($link,"insert into orders values (NULL,'$_POST[orderNb]','$_POST[preTaxCost]','$_POST[postTaxCost]','$_POST[orderSummary]')");
+    mysqli_query($link,"insert into orderlist values (NULL,'$_POST[orderNb]','$_POST[preTaxCost]','$_POST[postTaxCost]','$_POST[orderSummary]')");
     ?>
     <script type="text/javascript">
     window.location.href=window.location.href;
