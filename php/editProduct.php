@@ -89,14 +89,14 @@ if(isset($_POST["update"]))
     $tm=md5(time());
     $fnm=$_FILES["Image"]["name"];
     if($fnm==""){
-        mysqli_query($link,"update productlist set Product='$_POST[Product]', Inventory='$_POST[Inventory]', Price='$_POST[Price]', Description='$_POST[Description]' where id=$id");
+        mysqli_query($link,"update productlist set Product='$_POST[Product]', Inventory='$_POST[Inventory]', Price='$_POST[Price]', Sale='$_POST[Sale]', Description='$_POST[Description]' where id=$id");
     }
     else{
         $dst="../Images/".$tm.$fnm;
         $dst1="Images/".$tm.$fnm;
         move_uploaded_file($_FILES["Image"]["tmp_name"],$dst);
     
-        mysqli_query($link,"update productlist set Product='$_POST[Product]', Image='$dst1' ,Inventory='$_POST[Inventory]', Price='$_POST[Price]', Description='$_POST[Description]' where id=$id");
+        mysqli_query($link,"update productlist set Product='$_POST[Product]', Image='$dst1' ,Inventory='$_POST[Inventory]', Price='$_POST[Price]', Sale='$_POST[Sale]', Description='$_POST[Description]' where id=$id");
     }
 
     header("location: productlist.php");
