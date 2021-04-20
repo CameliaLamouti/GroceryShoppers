@@ -38,17 +38,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <a href="Products/Fruits and Vegetables/PP_Bananas.html"><img src="../Images/bananas.jpg">Shop now for bananas</a>
+                    <a href="Products/Fruits and Vegetables/PP_Bananas.php"><img src="../Images/bananas.jpg">Shop now for bananas</a>
                 </br>
                 <h6 style="color: red;">$0.79/lb<br><s style="color: black;">$1.49/lb</s></h6>
 
                 </div>
                 <div class="col-md-4">
-                    <a href="Products/Bread and Bakery/PP_Baguettes.html"><img src="../Images/baguette.jpeg">Shop now for Baguettes</a>
+                    <a href="Products/Bread and Bakery/PP_Baguettes.php"><img src="../Images/baguette.jpeg">Shop now for Baguettes</a>
                     <h6 style="color: red;">$3.00/pack<br><s style="color: black;">$4.00/pack</s></h6>
                 </div>
                 <div class="col-md-4">
-                    <a href="Products/Meat and Poultry/PP_Beef.html"><img src="../Images/beef.jpg">Shop now for Beef</a>
+                    <a href="Products/Meat and Poultry/PP_Beef.php"><img src="../Images/beef.jpg">Shop now for Beef</a>
                 </br><h6 style="color: red;">$10.00/lb<br><s style="color: black;">$16.79/lb</s></h6>
                 </div>
             </div>
@@ -63,22 +63,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <a href="Products/FruitsAndVegetables.html"><img src="../Images/fruits-veggies.jpg">Fruits and Vegetables</a>
+                    <a href="Products/FruitsAndVegetables.php"><img src="../Images/fruits-veggies.jpg">Fruits and Vegetables</a>
                 </div>
                 <div class="col-md-4">
-                    <a href="Products/DairyAndEggs.html"><img src="../Images/dairy-eggs.jpg">Dairy and Eggs</a>
+                    <a href="Products/DairyAndEggs.php"><img src="../Images/dairy-eggs.jpg">Dairy and Eggs</a>
                 </div>
                 <div class="col-md-4">
-                    <a href="Products/Beverages.html"><img src="../Images/beverages.jpg">Beverages</a>
+                    <a href="Products/Beverages.php"><img src="../Images/beverages.jpg">Beverages</a>
                 </div>
                 <div class="col-md-4">
-                    <a href="Products/FishAndSeafood.html"><img src="../Images/fish-seafood.jpg">Fish and Seafood</a>
+                    <a href="Products/FishAndSeafood.php"><img src="../Images/fish-seafood.jpg">Fish and Seafood</a>
                 </div>
                 <div class="col-md-4">
-                    <a href="Products/MeatAndPoultry.html"><img src="../Images/meat-poultry.jpg">Meat and Poultry</a>
+                    <a href="Products/MeatAndPoultry.php"><img src="../Images/meat-poultry.jpg">Meat and Poultry</a>
                  </div>
                  <div class="col-md-4">
-                    <a href="Products/BreadAndBakery.html"><img src="../Images/breads-bakery.jpg">Bread and Bakery</a>
+                    <a href="Products/BreadAndBakery.php"><img src="../Images/breads-bakery.jpg">Bread and Bakery</a>
                  </div>
             </div>
     
