@@ -69,7 +69,7 @@ include "connection.php";
             while($row=mysqli_fetch_array($res))
             {
                 echo "<tr>";
-                echo "<td>"; echo $row["ID"]; echo "</td>";
+                echo "<td>"; echo $row["id"]; echo "</td>";
                 echo "<td>"; echo $row["orderNb"]; echo "</td>";
                 echo "<td>"; echo $row["preTaxCost"]; echo "</td>";
                 echo "<td>"; echo $row["postTaxCost"]; echo "</td>";

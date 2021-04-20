@@ -21,7 +21,7 @@ while($row=mysqli_fetch_array($res))
 <html lang="en">
 
 <head>
-  <title>Edit User</title>
+  <title>Edit Order</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -32,25 +32,25 @@ while($row=mysqli_fetch_array($res))
 <body>
     <div class="container">
     <div class="col-lg-4">
-    <h2>Order</h2>
-    <form action="" name="form2" method="POST">
+    <h2>Edit Order</h2>
+    <form action="" name="form1" method="POST">
         <div class="form-group">
-        <label for="orderNb">OrderNb:</label>
-        <input type="text" class="form-control" id="orderNb" placeholder="Enter order Nb" name="orderNb">
+        <label for="orderNb">orderNb:</label>
+        <input type="text" class="form-control" id="orderNb" placeholder="Enter orderNb" name="orderNb" value="<?php echo $orderNb; ?>">
         </div>
         <div class="form-group">
-        <label for="preTaxCost">Pre-tax cost:</label>
-        <input type="text" class="form-control" id="preTaxCost" placeholder="Enter pre-tax cost" name="preTaxCost">
+        <label for="preTaxCost">preTaxCost:</label>
+        <input type="text" class="form-control" id="preTaxCost" placeholder="Enter preTaxCost" name="preTaxCost" value="<?php echo $preTaxCost; ?>">
         </div>
         <div class="form-group">
-        <label for="postTaxCost">Email:</label>
-        <input type="text" class="form-control" id="postTaxCost" placeholder="Enter postTaxCost" name="postTaxCost">
+        <label for="postTaxCost">postTaxCost:</label>
+        <input type="text" class="form-control" id="postTaxCost" placeholder="Enter postTaxCost" name="postTaxCost" value="<?php echo $postTaxCost; ?>">
         </div>
         <div class="form-group">
-        <label for="orderSummary">Order Summary:</label>
-        <input type="test" class="form-control" id="orderSummary" placeholder="Enter order summary" name="orderSummary">
+        <label for="orderSummary">orderSummary:</label>
+        <input type="text" class="form-control" id="orderSummary" placeholder="Enter orderSummary" name="orderSummary" value="<?php echo $orderSummary; ?>">
         </div>
-        <button type="submit" name="insert" class="btn btn-default">Insert</button>
+        <button type="submit" name="update" class="btn btn-default">Update</button>
     </form>
     </div>
     </div>
