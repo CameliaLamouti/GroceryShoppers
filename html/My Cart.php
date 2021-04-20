@@ -80,7 +80,7 @@
 
         </table>
     </div>
-    <button class="shop-item-button"><span  class="cart-btn"><a href="../../../../Soen287/php/orderlist.php">Place order</a></span></button>
+    <button class='place-order' class="shop-item-button" onclick="placeOrderClicked()"><span  class="cart-btn">Place order</span></button>
         <div class = "container cart-page" div class="total-price">
             <table>
                 <tr>

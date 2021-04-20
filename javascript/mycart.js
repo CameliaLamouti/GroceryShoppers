@@ -102,6 +102,13 @@ function removeCartItem() {
     
     }
 
+    function placeOrderClicked(){
+        alert('Order placed!');
+        console.log('it is working');
+        return
+
+    }
+
 
     function updateCartTotal()  {
         var cartItemContainer = document.getElementsByClassName('cart-items')[0]
