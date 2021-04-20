@@ -29,6 +29,12 @@ function ready(){
             var button = addToCartButtons[i]
             button.addEventListener('click', addToCartClicked)
         }
+
+        var placeOrderButtons = document.getElementsByClassName('place-order')
+        for (var i = 0; i < placeOrderButtons.length; i++) {
+            var button = placeOrderButtons[i]
+            button.addEventListener('click', placeOrderClicked)
+        }
 }
 
 function removeCartItem() {
