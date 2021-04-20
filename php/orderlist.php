@@ -30,9 +30,13 @@ include "connection.php";
     <div class="col-lg-4">
     <h2>Order</h2>
     <form action="" name="form2" method="POST">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" placeholder="Enter Email Address" name="email">
+        </div>
         <div class="form-group">
-        <label for="orderNb">OrderNb:</label>
-        <input type="text" class="form-control" id="orderNb" placeholder="Enter order Nb" name="orderNb">
+        <label for="orderNb">Order Number:</label>
+        <input type="text" class="form-control" id="orderNb" placeholder="Enter Order Number" name="orderNb">
         </div>
         <div class="form-group">
         <label for="preTaxCost">Pre-tax cost:</label>
@@ -40,11 +44,11 @@ include "connection.php";
         </div>
         <div class="form-group">
         <label for="postTaxCost">Post-tax cost:</label>
-        <input type="text" class="form-control" id="postTaxCost" placeholder="Enter postTaxCost" name="postTaxCost">
+        <input type="text" class="form-control" id="postTaxCost" placeholder="Enter Post Tax Cost" name="postTaxCost">
         </div>
         <div class="form-group">
         <label for="orderSummary">Order Summary:</label>
-        <input type="test" class="form-control" id="orderSummary" placeholder="Enter order summary" name="orderSummary">
+        <input type="test" class="form-control" id="orderSummary" placeholder="Enter Order Summary" name="orderSummary">
         </div>
         <button type="submit" name="insert" class="btn btn-default">Insert</button>
     </form>
@@ -55,6 +59,7 @@ include "connection.php";
     <thead>
       <tr>
         <th>#</th>
+        <th>Email</th>
         <th>orderNb</th>
         <th>Pre-tax Cost</th>
         <th>Post-tax Cost</th>
@@ -70,6 +75,7 @@ include "connection.php";
             {
                 echo "<tr>";
                 echo "<td>"; echo $row["id"]; echo "</td>";
+                echo "<td>"; echo $row["email"]; echo "</td>";
                 echo "<td>"; echo $row["orderNb"]; echo "</td>";
                 echo "<td>"; echo $row["preTaxCost"]; echo "</td>";
                 echo "<td>"; echo $row["postTaxCost"]; echo "</td>";

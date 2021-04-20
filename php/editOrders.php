@@ -34,8 +34,12 @@ while($row=mysqli_fetch_array($res))
     <div class="col-lg-4">
     <h2>Edit Order</h2>
     <form action="" name="form1" method="POST">
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" id="email" placeholder="Enter orderNb" name="email" value="<?php echo $email; ?>">
+        </div>
         <div class="form-group">
-        <label for="orderNb">orderNb:</label>
+        <label for="orderNb">Order Number:</label>
         <input type="text" class="form-control" id="orderNb" placeholder="Enter orderNb" name="orderNb" value="<?php echo $orderNb; ?>">
         </div>
         <div class="form-group">
@@ -59,8 +63,15 @@ while($row=mysqli_fetch_array($res))
 <?php
 if(isset($_POST["update"]))
 {
-    mysqli_query($link,"update orderlist set orderNb='$_POST[orderNb]', preTaxCost='$_POST[preTaxCost]', postTaxCost='$_POST[postTaxCost]', orderSummary='$_POST[orderSummary]' where id=$id");
+    mysqli_query($link,"update orderlist set email='$_POST[email]',orderNb='$_POST[orderNb]', preTaxCost='$_POST[preTaxCost]', postTaxCost='$_POST[postTaxCost]', orderSummary='$_POST[orderSummary]' where id=$id");
     header("location: orderlist.php");
+    $updatemsg = "This is a confirmation that your order has been updated to : ";
+    $updatemsg2 = ". New price post tax is: ";
+    $orderSummary = $_POST[orderSummary];
+    $postTaxCost = $_POST[postTaxCost];
+    $email = $_POST[email];
+    $msg = $updatemsg . $orderSummary . $updatemsg2 . $postTaxCost;
+    mail($email, "Order Update Confirmation", $msg);
 }
 ?>
 
