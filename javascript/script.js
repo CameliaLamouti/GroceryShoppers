@@ -104,12 +104,12 @@ function resetPassword(){
 }
 
 function createAccount(){
-  var firstname = document.getElementById("firstname").value;
-  var lastname = document.getElementById("lastname").value;
+  var firstname = document.getElementById("firstName").value;
+  var lastname = document.getElementById("lastName").value;
   var emailvar = document.getElementById("email").value;
-  var confirmemail = document.getElementById("confirmemail").value;
-  var pass = document.getElementById("pass").value;
-  var confirmpass = document.getElementById("confirmpass").value;
+  var confirmemail = document.getElementById("confirmEmail").value;
+  var pass = document.getElementById("pwd").value;
+  var confirmpass = document.getElementById("confirmPass").value;
 if(document.getElementById("checkbox").checked){
   if (firstname!= "" && lastname!= "" && emailvar!= "" && confirmemail!= "" && pass!= "" && confirmpass!= ""){
     if (emailvar==confirmemail){
