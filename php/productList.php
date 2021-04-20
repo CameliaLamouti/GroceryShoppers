@@ -33,6 +33,10 @@ include "connection.php";
         <div class="form-group">
         <label for="Product">Product:</label>
         <input type="text" class="form-control" id="Product" placeholder="Enter Product" name="Product">
+        </div>        
+        <div class="form-group">
+        <label for="Image">Image:</label>
+        <input type="file" class="form-control" name="f1">
         </div>
         <div class="form-group">
         <label for="Inventory">Inventory:</label>
