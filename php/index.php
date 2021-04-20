@@ -1,6 +1,35 @@
-<?php
-include 'db_connection.php';
-$conn = OpenCon();
-echo "Connected Successfully";
-CloseCon($conn);
-?> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backstore Page</title>
+    <link rel="stylesheet" href="../css/style2.css">
+    <script src="https://kit.fontawesome.com/d27ba70d65.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div id="sidebar"></div>
+    
+    <script>
+    $(function(){
+      $("#sidebar").load("sidenavphp.html");
+    });
+    </script>
+
+    <div class="content">
+        <div class="header">
+            <h2>Welcome Admin</h2>
+        </br>
+        <p>To view and edit the products inventory, please click product list.
+        </br> To view and edit the list of users, please click User list.
+         </br> To view and edit an order, please click Order list.
+        </br> 
+        </p>
+        <p ><a href="../html/index.html">main page</a></p>
+        </div>
+    </div>
+      
+</body>
+</html>
