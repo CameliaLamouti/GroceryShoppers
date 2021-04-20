@@ -1,5 +1,5 @@
 <?php
-include "connection.php";
+include "../php/connection.php";
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +73,7 @@ include "connection.php";
 <?php
 if(isset($_POST["signUp"]))
 {
-  mysqli_query($link,"signUp into userlist values (NULL,'$_POST[firstName]','$_POST[lastName]','$_POST[email]','$_POST[pwd]')");
+  mysqli_query($link,"insert into userlist values (NULL,'$_POST[firstName]','$_POST[lastName]','$_POST[email]','$_POST[pwd]')");
   header("location: ../html/Sign Up.php");
 }
 ?>
