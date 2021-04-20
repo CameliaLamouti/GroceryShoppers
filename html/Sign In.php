@@ -1,3 +1,7 @@
+<?php
+include "connection.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +11,8 @@
         <title>Sign In</title>
         <link rel="stylesheet" href="../css/style.css">
         <script src="../javascript/script.js" defer></script>
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        
     </head>
     <body>
         <div id="nav-placeholder"></div>
@@ -31,7 +36,7 @@
               <input type="text" placeholder="Enter Email" name="email" id="email" required onfocusout="validateEmail()">
           
               <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+              <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required>
           
               <button type="submit" onclick = "signIn()">Login</button>
               <label>
@@ -41,7 +46,8 @@
             <div style="background-color:#f1f1f1">
               <span class="psw"><a href="PasswordReset.html">Forgot password?</a></span>     
             
-              <span class="signup">Don't have an account? <a href="Sign Up.html">Sign Up</a></span>
+              <span class="signup">Don't have an account? <a href="Sign Up.php">Sign Up</a></span>
+              
             </div>
             </div>
     
@@ -59,4 +65,6 @@
             });
         </script>
     </body>
+
+
 </html>
