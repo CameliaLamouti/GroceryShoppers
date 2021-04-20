@@ -1,5 +1,5 @@
 <?php
-include "connection.php";
+include "../php/connection.php";
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ include "connection.php";
               <label for="psw"><b>Password</b></label>
               <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required>
           
-              <button type="submit" onclick = "signIn()">Login</button>
+              <button type="submit" onclick = "signIn()" name="signIn">Login</button>
               <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
               </label>
@@ -65,6 +65,33 @@ include "connection.php";
             });
         </script>
     </body>
+
+    <?php
+    if(isset($_POST["signIn"]))
+    {
+      function checkifexist($email){
+        
+        $result = mysqli_query($link,"SELECT email FROM userlist where email ='".$email."' ");
+        $num_rows = mysqli_num_rows($result);
+        
+        if($num_rows > 0)
+        {
+        return true;
+        }
+        else
+        {
+        return false;
+        }
+        } 
+        $input = 'email';
+        if(checkifexist($email))
+        {
+        echo "<style color:green> You have succesfully signed in !</style> ";
+        header("location: ../html/index.html");
+        }
+
+    }
+    ?>
 
 
 </html>
