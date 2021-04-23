@@ -58,7 +58,7 @@ CREATE TABLE `productlist` (
   `Image` varchar(500) NOT NULL,
   `Inventory` int(30) NOT NULL,
   `Price` varchar(30) NOT NULL,
-  `Sale` varchar(30) NOT NULL,
+  `Sale` varchar(30),
   `Description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

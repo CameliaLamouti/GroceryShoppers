@@ -1,5 +1,6 @@
 <?php
 include "../php/connection.php";
+require ('../database/functions.php');
 ?>
 
 <!DOCTYPE html>
