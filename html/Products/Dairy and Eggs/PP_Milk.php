@@ -61,7 +61,7 @@
           <option value="Soy">Soy</option>
         </select>
         <label for="amount">Quantity</label>
-        <select class="qty" name="amount">
+        <select id='qty' class="qty" name="amount">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +15,7 @@
     <script src="../../../javascript/mycart.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
-<body>
+<body onload ="document.getElementById('qtyCoke').value = getSavedValue('qtyCoke');">
     <div id="nav-placeholder"></div>
     <script>
     $(function(){
@@ -28,48 +33,53 @@
         <div class="right-column">
  
          <!-- Product Description -->
-        <div class="product-description">
-          <h1 class="shop-item-title">Coca-Cola</h1>
-          <p>
-              <h3></br>Description: Soft drink, made in the United States.</h3>
-              <h3></br>Nutritional Information</h3>
-                <li>Calories: 200</li>
-                <li>Total Fat: 0g</li>
-                <li>Saturated fat: 0.1g</li>
-                <li>Cholestorol: 0mg</li>
-                <li>Sodium: 65mg</li>
-                <li>Potassium: 0mg</li>
-                <li>Total Carbohydrate: 55g</li>
-                <li>Sugar: 55g</li>
-                <li>Protein: 0g</li>
+            <div class="product-description">
+                <h1 class="shop-item-title" id="coke" >Coca-Cola</h1>
+                <p>
+                    <h3></br>Description: Soft drink, made in the United States.</h3>
+                    <h3></br>Nutritional Information</h3>
+                        <li>Calories: 200</li>
+                        <li>Total Fat: 0g</li>
+                        <li>Saturated fat: 0.1g</li>
+                        <li>Cholestorol: 0mg</li>
+                        <li>Sodium: 65mg</li>
+                        <li>Potassium: 0mg</li>
+                        <li>Total Carbohydrate: 55g</li>
+                        <li>Sugar: 55g</li>
+                        <li>Protein: 0g</li>
+                </p>
+            </div>
+ 
+ 
+            <!-- Product Pricing + Add to cart -->
             
-          </p>
-        </div>
- 
- 
-    <!-- Product Pricing + Add to cart -->
-    <div class="product-price">
-      <span class="shop-item-price">$4.00/pack</span>
-    <div>
+                <div class="product-price">
+                    <span class="shop-item-price">$4.00/pack</span>
+                        <div>
+                            <label for="amount">Quantity</label>
+                            <select id='qtyCoke' class="qty" name="amount" onchange="saveValue(this)">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>                      
+                        <input type="hidden" name="productid" value="coke">   
+                    <button class="shop-item-button"><span class="cart-btn">Add to cart</span></button>
 
-        <label for="amount">Quantity</label>
-        <select class="qty" name="amount">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-    </div>
-    <button class="shop-item-button"><span class="cart-btn">Add to cart</span></button>
-    </div>
-  </div>
-</main>
+                    
+                </div>
+                <form class="add-to-cart" action="../../My Cart.php" method="post">
+                <button ><span >Go to cart</span></button>
+            </form>
+        </div>
+    </main>
 
 <div class="container cart-page">
   <table class="cart-items">

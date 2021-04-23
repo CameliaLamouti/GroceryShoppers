@@ -58,7 +58,7 @@
           <option value="Large">Large</option>
         </select>
         <label for="amount">Quantity</label>
-        <select class="qty" name="amount">
+        <select id='qty' class="qty" name="amount">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>

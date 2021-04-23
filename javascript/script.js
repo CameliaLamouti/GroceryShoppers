@@ -26,7 +26,7 @@ function myFunction() {
     }
   }
 
-function calculate() {
+/*function calculate() {
   var applesqty = document.getElementById("applesqty").value;
   var beefqty = document.getElementById("beefqty").value;
   var shrimpqty = document.getElementById("shrimpqty").value;
@@ -46,7 +46,7 @@ function calculate() {
   document.getElementById("qst").innerHTML = qst;
   document.getElementById("gst").innerHTML = gst;
   document.getElementById("total").innerHTML = total;
-}
+}*/
 /*Sign In/Sign Up*/
 
 function resetClass(element, classname){

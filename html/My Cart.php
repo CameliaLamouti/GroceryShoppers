@@ -1,3 +1,18 @@
+<?php
+session_start();
+if (empty($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+}
+
+array_push($_SESSION['cart'], $_GET['id']);
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +33,13 @@
         });
         </script>
 
+  
+    <script>
+        console.log(sessionStorage);
+        </script>
     <main>
 <!--Products in cart details-->
+<button class='show_cart' onclick="displayCart()"><span>display cart</span></button>
     <div class="container cart-page">
         <table class="cart-items">
 
@@ -30,53 +50,7 @@
                 
             </tr>
 
-            <tr class="cart-row">
-                <td>
-                    <div class="cart-info">
-                        <img src="../Images/appless.jpg" >
-                        <div>
-                            <p class="cart-item-title">Apples</p>
-                            <small><b>Price:</b> $00.79/lb</small></br>
-
-                            <button class="btn btn-danger"> REMOVE </button>
-                        </div>
-                    </div>
-                </td>
-                <td> <input class="cart-quantity-input" type="number" value="2"></td>
-                <td class="cart-price">$0.79</td>
-            </tr>
-
-            <tr class="cart-row">
-                <td>
-                    <div class="cart-info">
-                        <img src="../Images/beef.jpg" >
-                        <div>
-                            <p class="cart-item-title">Beef</p>
-                            <small><b>Price:</b> $10.00/lb</small></br>
-
-                            <button class="btn btn-danger"> REMOVE </button>
-                        </div>
-                    </div>
-                </td>
-                <td ><input class="cart-quantity-input" type="number" value="1"></td>
-                <td class="cart-price" >$10.00</td>
-            </tr>
-
-            <tr class="cart-row">
-                <td>
-                    <div class="cart-info">
-                        <img src="../Images/shrimp.jpg" >
-                        <div>
-                            <p class="cart-item-title">Shrimp</p>
-                            <small><b>Price:</b> $13.99/lb</small></br>
-
-                            <button class="btn btn-danger"> REMOVE </button>
-                        </div>
-                    </div>
-                </td>
-                <td ><input class="cart-quantity-input" type="number" value="2"></td>
-                <td class="cart-price" >$27.98 </td>
-            </tr>
+            
 
         </table>
     </div>
